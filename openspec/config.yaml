@@ -1,0 +1,30 @@
+schema: spec-driven
+
+context: |
+  Client: NotOnMap (Unknown Destinations Pvt Ltd, Chaminoo, Barour, Chamba, Himachal Pradesh), a community-tourism
+  organisation whose purpose is income for village households through tourism. Knowledge partner to Himalay Unnati
+  Mission (SSRDP).
+  Product: "Chamba ke sang" (final name; never "Chamba Impact Expedition"). Two bases: H2O House (river, from Rs 5,999/night
+  on notonmap.com) and Mystic Village (Bhaloli, Khajjiar ridge, from Rs 1,980/night). 3-night core in River and Ridge tiers;
+  6-night "river to ridge" learning journey.
+  Audience of this site, in order: B2B partners (Himachal tour operators and DMCs, experiential travel companies,
+  institutions and CSR teams, Dalhousie/Khajjiar hotels and drivers), then direct travellers.
+  Hard constraints:
+  - Show only experiences whose readiness tier is 2+ AND whose host consent is recorded, as "bookable". Anything else is
+    shown only as "in development" or hidden.
+  - Never publish an unverified figure. The 87% satisfaction, 3x repeat, 129 room nights and Rs 1.7L figures are
+    unverified and must not appear. Net rates are "on request" until NotOnMap approves a rate card.
+  - Local Spend Record copy says "payment", never "benefit" or "impact"; hypothetical numbers are labelled hypothetical.
+  - No photographs of children; no visitor teaching at the school; no rabbit photography.
+  - People are named only with consent; never show individual earnings.
+  - Mobile first: partners open links from WhatsApp, often on slow hill networks.
+  - Must be maintainable by NotOnMap after 5 Dec 2026 without developers: static site, content in data files that mirror
+    a Google Sheet; enquiry form posts to Google Apps Script (endpoint configured later).
+  - Photographs: Chalo Chamba (permission confirmed by the team) and NotOnMap's own; credit in one footer line.
+  Deadlines: live v1 by 1 Dec 2026 (Plan.xlsx 3.11). Source documents live in the claude.ai project "DoCC - NotonMaps".
+
+rules:
+  proposal:
+    - State what is out of scope
+  tasks:
+    - Break tasks into chunks of at most 2 hours
