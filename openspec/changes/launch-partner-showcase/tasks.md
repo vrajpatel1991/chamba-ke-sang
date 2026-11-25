@@ -41,7 +41,7 @@
 ## 8. Publish and handover
 
 - [x] 8.1 Write `README.md` (edit the Sheet, export, check, publish; where settings live) and verify a non-developer can follow it end to end on a copy of the repo
-- [ ] 8.2 Publish to GitHub Pages and verify the live URL loads on a phone with `?p=institution` opening the institution view
+- [x] 8.2 Publish to GitHub Pages and verify the live URL loads on a phone with `?p=institution` opening the institution view
 
 ## Workflow follow-up
 

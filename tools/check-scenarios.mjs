@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Walks every scenario the specs name, in a real browser, at 1440 and 390.
-//   node tools/check-scenarios.mjs [--width 1440]
+//   node tools/check-scenarios.mjs [--width 1440] [--base https://…/]
+// With --base it checks a site that is already published instead of this folder.
 // It serves this folder over http on 127.0.0.1 and drives one headless Chrome over the DevTools
 // protocol, the way the taste-skill's own checks do. It prints one line per scenario and exits 1
 // on the first failure.
@@ -12,6 +13,7 @@ import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
+const BASE_ARG = process.argv.includes('--base') ? process.argv[process.argv.indexOf('--base') + 1] : null;
 const WIDTHS = (process.argv.includes('--width')
   ? [Number(process.argv[process.argv.indexOf('--width') + 1])]
   : [1440, 390]);
@@ -42,8 +44,12 @@ const server = http.createServer((req, res) => {
     fs.createReadStream(f).pipe(res);
   } catch { res.writeHead(404); res.end('not found'); }
 });
-const port = await new Promise((res) => server.listen(0, '127.0.0.1', () => res(server.address().port)));
-const base = `http://127.0.0.1:${port}/`;
+let base = BASE_ARG;
+if (!base) {
+  const port = await new Promise((res) => server.listen(0, '127.0.0.1', () => res(server.address().port)));
+  base = `http://127.0.0.1:${port}/`;
+} else if (!base.endsWith('/')) base += '/';
+console.log('checking ' + base);
 
 const profile = path.join(ROOT, '.taste-skill', 'chrome-scenarios');
 fs.mkdirSync(profile, { recursive: true });
@@ -92,12 +98,13 @@ try {
   });
 
   const open = async (href) => {
-    await S('Page.navigate', { url: base + href });
+    const sep = href.includes('?') ? '&' : '?';
+    await S('Page.navigate', { url: base + href + (BASE_ARG ? sep + 'cb=' + Date.now() : '') });
     for (let i = 0; i < 100; i += 1) {
       await sleep(60);
       if (await evaluate('document.readyState === "complete"')) break;
     }
-    await sleep(350); // the page's modules render from data/data.js
+    await sleep(BASE_ARG ? 1200 : 350); // the page's modules render from data/data.js
   };
 
   const check = async (name, src) => {

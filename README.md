@@ -114,6 +114,12 @@ node .claude/skills/design-taste-frontend/scripts/copy-lint.mjs index.html --kin
 walks the partner switcher, the map, the catalogue, the planner and the form. It needs Chrome
 installed; nothing else.
 
+After a push, run the same 69 checks against the published site:
+
+```bash
+node tools/check-scenarios.mjs --base https://vrajpatel1991.github.io/chamba-ke-sang/
+```
+
 ## What NotOnMap still has to supply
 
 1. **Photographs.** Every picture on the site today is a licensed stand-in from Wikimedia Commons of
