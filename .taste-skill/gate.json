@@ -1,0 +1,317 @@
+{
+ "start": "2026-11-25T08:10:46.678Z",
+ "round": 0,
+ "idle": 0,
+ "errors": 0,
+ "status": "pass",
+ "history": [
+  {
+   "at": "2026-11-25T08:12:32.815Z",
+   "mode": "manual",
+   "status": "pass",
+   "fails": 0,
+   "round": 0,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "index.html",
+  "url": null,
+  "root": null,
+  "kind": "place",
+  "category": "village stays and craft sessions in Chamba",
+  "primary": "Hold dates",
+  "rounds": 3,
+  "start": "2026-11-25T08:10:46.678Z",
+  "by": "gate.mjs --start"
+ },
+ "manual": true,
+ "fp": "8e42712a2e4652ed",
+ "page": "index.html",
+ "found": {
+  "fails": [
+   {
+    "check": "scroll-reveal",
+    "where": "footer#contact > div.wrap > div.closing__cta.close--type > a.btn.btn--primary \"Hold dates\"",
+    "msg": "starts \"color\" (0.1 s) the moment it is scrolled into view (an IntersectionObserver)",
+    "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "scroll-reveal"
+    ],
+    "wheres": [
+     "footer#contact > div.wrap > div.closing__cta.close--type > a.btn.btn--primary \"Hold dates\""
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "scroll-reveal",
+    "where": "section#hold > div.wrap > div.grid.grid--top > figure.pl-photo.span-6",
+    "msg": "starts an animation (1.6 s) the moment it is scrolled into view (an IntersectionObserver) on img (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)",
+    "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-headings",
+    "where": "h2#hold-h \"Hold dates with NotOnMap\"",
+    "msg": "\"Hold dates with NotOnMap\" names no product, part, place or section (the one brand line a page may have)",
+    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-buttons",
+    "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Hold dates\"",
+    "msg": "\"Hold dates\" does not start with a verb (book, buy, try, start, get, see...) (and 2 more like it: \"H2O House\", \"Tour operator or DMC\")",
+    "fix": "label buttons with a verb and what the visitor gets (\"Book a room\", \"Start free trial\")",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "main#top > section.hero.hero--place / section#visit",
+    "msg": "296px between these sections, +30% against the median 228px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#visit / section#offer",
+    "msg": "uneven space at the edge of a band: 49px outside its edge, 117px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "div.grid.grid--top > div.visit.visit--card > nav.switch.switch--tight > a:nth-of-type(1) \"H2O House\"",
+    "msg": "\"H2O House\" goes to #visit, the block it already sits in",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "div.grid.grid--top > div.visit.visit--card > nav.switch.switch--tight > a:nth-of-type(2) \"Mystic Village\"",
+    "msg": "\"Mystic Village\" goes to #visit, the block it already sits in",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-credit",
+    "where": "(the page text)",
+    "msg": "1 library source (wikimedia): the page credits wikimedia; confirm each shows the client's own product, place or people",
+    "fix": "confirm the library photograph shows the client's own product, place or people; otherwise replace it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.wrap.nav__bar > nav.nav__links > div.nav__item:nth-of-type(1) > a.nav__link \"Visit\"",
+    "msg": "\"Visit\" opens a section headed \"Getting to Chaminoo, Barour, Chamba\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.nav__item:nth-of-type(3) > div.nav__menu > div.wrap.grid > a.menu-card.span-4:nth-of-type(1) \"River base From ₹5,999 a night\"",
+    "msg": "\"River base From ₹5,999 a night\" opens a section headed \"Stays and sessions\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.nav__item:nth-of-type(3) > div.nav__menu > div.wrap.grid > a.menu-card.span-4:nth-of-type(2) \"Ridge base From ₹1,980 a night\"",
+    "msg": "\"Ridge base From ₹1,980 a night\" opens a section headed \"Stays and sessions\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "label-centre",
+    "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Hold dates\"",
+    "msg": "its label sits 18px off-centre (25px of room at the left, 43px at the right) (and 1 more like it: \"Hold dates\")",
+    "fix": "centre the label in its button, or fill the empty side with an icon",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-current",
+    "where": "header.nav",
+    "msg": "the nav stays on screen with 3 links to the page's sections, but never marks the one you are in (no link changes as the page scrolls)",
+    "fix": "mark the link of the section on screen (a colour, a weight or a line under it) as the visitor scrolls",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "action-repeat",
+    "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"hold dates\"",
+    "msg": "\"hold dates\" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it",
+    "fix": "show the action once a screen besides the nav's button: the hero's, the close's or the phone bar's, never all at once",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "form-send",
+    "where": "div.wrap > div.grid.grid--top:nth-of-type(2) > div.span-6 > form.form \"mailto:holddates@chambakesang.example\"",
+    "msg": "the form opens a mail to holddates@chambakesang.example: a stand-in until the client gives its form address; list it in the report",
+    "fix": "send the form to the client's address (data-endpoint) and show the confirmation only after it answers; list a mailto stand-in in the report",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "no-visual",
+    "where": "section#visit \"Getting to Chaminoo, Barour, Chamba\"",
+    "msg": "pictures, effects and mocks cover 20% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "no-visual",
+    "where": "section#offer \"What a partner sells\"",
+    "msg": "pictures, effects and mocks cover 18% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "no-visual",
+    "where": "section#catalogue \"Stays and sessions\"",
+    "msg": "pictures, effects and mocks cover 16% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#hold / footer#contact",
+    "msg": "354px between these sections, +26% against the median 280px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#offer / section#catalogue",
+    "msg": "uneven space at the edge of a band: 94px outside its edge, 317px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-set",
+    "where": "div.wrap > div.grid.grid--top > figure.pl-photo.span-6 > img \"photo-f185667234-500.jpg\"",
+    "msg": "3 photographs in more than one look: saturation from 0.11 to 0.58; warm and cool photographs mixed (b* -20 to +5); the odd one out is photo-f185667234-500.jpg",
+    "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "unit-break",
+    "where": "div.grid.grid--top > div.span-3.stack-4:nth-of-type(2) > ul.rows > li:nth-of-type(2) \"The walk in to the ridge about 2 km on f\"",
+    "msg": "\"2 km\" breaks across two lines: the number ends one line and its unit starts the next",
+    "fix": "keep a number with its unit: a no-break space (&nbsp;) between them",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "empty-area",
+    "where": "footer#contact \"Chamba ke sang, in the company of Chamba\"",
+    "msg": "44% of the section is empty: 448px of empty rows between its content, 15% beside content that covers under half the container, in its 1491px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 100,
+   "layout": 5
+  }
+ },
+ "open": [],
+ "waived": [
+  {
+   "check": "scroll-reveal",
+   "where": "footer#contact > div.wrap > div.closing__cta.close--type > a.btn.btn--primary \"Hold dates\"",
+   "msg": "starts \"color\" (0.1 s) the moment it is scrolled into view (an IntersectionObserver)",
+   "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "scroll-reveal"
+   ],
+   "wheres": [
+    "footer#contact > div.wrap > div.closing__cta.close--type > a.btn.btn--primary \"Hold dates\""
+   ],
+   "reason": "Nothing on this page fades, rises or unmasks on scroll. The close repeats the main action word for word, which makes it a twin of the phone action bar, and system.js watches every twin with an IntersectionObserver so one screen never shows the action twice. The transition the check sees is the kit's own bar hiding itself; the button is still from the first paint and never moves."
+  }
+ ],
+ "warnCount": 23,
+ "at": "2026-11-25T08:12:32.816Z"
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "check": "scroll-reveal",
+    "target": "div.closing__cta.close--type > a.btn.btn--primary",
+    "reason": "Nothing on this page fades, rises or unmasks on scroll. The close repeats the main action word for word, which makes it a twin of the phone action bar, and system.js watches every twin with an IntersectionObserver so one screen never shows the action twice. The transition the check sees is the kit's own bar hiding itself; the button is still from the first paint and never moves."
+  }
+]

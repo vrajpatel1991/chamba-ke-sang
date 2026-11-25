@@ -1,0 +1,11 @@
+{
+ "page": "index.html",
+ "url": null,
+ "root": null,
+ "kind": "place",
+ "category": "village stays and craft sessions in Chamba",
+ "primary": "Hold dates",
+ "rounds": 3,
+ "start": "2026-11-25T08:10:46.678Z",
+ "by": "gate.mjs --start"
+}

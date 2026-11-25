@@ -1,0 +1,151 @@
+/* Page CSS: only what the kit lacks and what sits inside a visual.
+   Every value is a system token. No second scale, radius, button or card style. */
+
+/* The one display-type moment: the district set large under the visit h2 (sections.md section 4). */
+.type-moment {
+  font: var(--display-weight) clamp(34px, 4.6vw, 68px)/1.08 var(--font-display);
+  letter-spacing: -0.03em;
+  margin: 0 0 var(--s-6);
+}
+.type-moment a { display: block; color: inherit; text-decoration: none; }
+
+/* A head row whose side line starts on a column, so every block stands on the page's lines. */
+.head-row { margin-bottom: var(--head-gap); }
+.head-row > p { align-self: end; margin: 0; }
+
+/* The catalogue's two groups and two photographs take two screens where the columns narrow. */
+@media (min-width: 640px) and (max-width: 1023px) { #shapes { --h: 2; } }
+/* From 640 to 1279 the columns narrow: each block takes half the row, and from 1024 the section
+   takes two screens, since the stacked rows and the photograph need them. */
+@media (min-width: 1024px) and (max-width: 1279px) { #catalogue, #offer { --h: 2; } }
+@media (min-width: 640px) and (max-width: 1279px) {
+  #catalogue [data-group], #catalogue .pl-photo { grid-column: span 6; }
+}
+@media (max-width: 639px) { #catalogue .pl-photo > img { aspect-ratio: 4 / 3; } }
+
+/* The tablet stacks every split, which makes a full-width picture very tall. Holding the picture to
+   eight columns keeps each section on one tablet screen (layout-v4.md section 2, the tablet table). */
+@media (min-width: 640px) and (max-width: 1023px) {
+  #visit #map-frame, #offer .pl-photo, #hold .pl-photo { grid-column: 1 / span 6; }
+}
+
+/* The chip row that picks a partner type, and the one that picks a base. One component, used twice. */
+/* The chips sit on the grid's columns, so every edge is one the page already uses. */
+.switch { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-3); margin-bottom: var(--s-6); }
+.switch--tight { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 639px) { .switch { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.switch a {
+  display: flex; align-items: center; justify-content: center; min-height: 48px;
+  padding: var(--s-2) var(--s-4); text-align: center;
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  color: var(--ink); text-decoration: none;
+  font-size: var(--t-body); line-height: 1.4;
+  transition: background 180ms var(--ease), border-color 180ms var(--ease);
+}
+.switch a:hover { border-color: var(--ink); }
+.switch a[aria-current="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.switch--tight { margin-bottom: var(--s-4); }
+
+/* A partner's six answers, as a ruled list on the section's ground. */
+.answers { display: grid; gap: 0; margin: 0; }
+.answers > div {
+  display: grid; grid-template-columns: minmax(0, 170px) minmax(0, 1fr);
+  gap: var(--s-1) var(--s-4);
+  padding-block: var(--s-3);
+  border-bottom: 1px solid var(--line);
+}
+.answers > div:first-child { padding-top: 0; }
+.answers dt { color: var(--muted); }
+.answers dd { margin: 0; color: var(--ink); max-width: 56ch; }
+@media (max-width: 639px) { .answers > div { grid-template-columns: minmax(0, 1fr); } }
+
+/* The drawn map: no service, no key, no tile. It is a diagram of the district, never a street. */
+.map { display: block; width: 100%; background: var(--surface); }
+.map svg { display: block; width: 100%; height: auto; }
+.map .mp-line { fill: none; stroke: var(--line-strong, var(--muted)); stroke-width: 1.5; }
+.map .mp-stitch { fill: none; stroke: var(--ink); stroke-width: 1.6; stroke-dasharray: 6 4; stroke-linecap: round; }
+.map .mp-dot { fill: var(--ink); }
+.map .mp-dot--arrival { fill: none; stroke: var(--ink); stroke-width: 1.5; }
+.map .mp-label { font: 500 13px/1.2 var(--font-text); fill: var(--ink); }
+.map .mp-meta { font: 400 13px/1.2 var(--font-text); fill: var(--muted); }
+.map .mp-base.is-on .mp-dot { fill: var(--ink); }
+.map .mp-base.is-on .mp-ring { fill: none; stroke: var(--accent); stroke-width: 3; }
+.map .mp-ring { fill: none; stroke: none; }
+
+/* The day list on journey.html: the running stitch joins one day to the next. */
+.days { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.days > li { position: relative; padding: var(--s-4) 0 var(--s-4) var(--s-6); border-bottom: 1px solid var(--line); }
+.days > li:first-child { padding-top: 0; }
+.days > li::before {
+  content: ""; position: absolute; left: 7px; top: var(--s-4); bottom: calc(-1 * var(--s-4));
+  border-left: 1.6px dashed var(--ink);
+}
+.days > li:first-child::before { top: 6px; }
+.days > li:last-child::before { display: none; }
+.days > li::after {
+  content: ""; position: absolute; left: 3px; top: var(--s-4);
+  width: 9px; height: 9px; border-radius: 999px; background: var(--ink);
+}
+.days > li:first-child::after { top: 6px; }
+.day__head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s-4); }
+.day__base { color: var(--muted); font-size: var(--t-small); }
+.day__sessions { margin: var(--s-2) 0 0; padding: 0; list-style: none; color: var(--ink); }
+.day__sessions > li { padding-block: 2px; }
+.day__when { color: var(--muted); }
+
+.day__line { margin: var(--s-2) 0 0; color: var(--ink); }
+
+/* The hold-dates form carries the nine fields the brief names, so its rows sit one step closer. */
+#hold .form { gap: var(--s-3); }
+
+/* The two link lines belong to the heading above them, not to the groups below. */
+#catalogue .section-head + .t-small { margin-bottom: var(--s-7); }
+
+/* The catalogue's two groups stand beside each other, so their rows keep one height. */
+#catalogue .rows > li { min-height: 136px; align-content: start; }
+
+/* A block merged into the section above as its last element. */
+.merged-block { margin-top: var(--s-9); display: grid; gap: var(--s-4); }
+
+/* The planner's controls: the system's fields, laid out in one row beside the h2. */
+.plan-inputs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s-4); margin: 0; }
+@media (max-width: 1023px) { .plan-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 639px) { .plan-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-3); } }
+
+/* What a partner copies, shown as it will be pasted. */
+.copy-block {
+  margin: var(--s-3) 0 0; padding: var(--s-5);
+  background: var(--bg); border: 1px solid var(--line);
+  font: 400 var(--t-small)/1.6 var(--font-text);
+  white-space: pre-wrap; overflow-wrap: break-word; color: var(--ink);
+}
+
+/* Two sections hold a list that grows: the planner's days change with the journey the visitor
+   builds, and the catalogue's rows change with the Sheet. Both keep their screens as a floor and
+   grow past them rather than lie on the section below. */
+#planner, #bookable { height: auto; min-height: calc(var(--h, 1) * 100svh); }
+@media (max-width: 639px) {
+  #planner, #bookable { min-height: calc(var(--hm, var(--h, 1)) * 100lvh); }
+}
+
+/* The footer's word list and the name set wide (footer-visit). */
+.footer__nav { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-5); margin: var(--s-4) 0 0; padding: 0; list-style: none; }
+.footer__nav a { color: var(--ink); }
+.closing__links > .close__word {
+  font: var(--display-weight) min(10vw, 136px)/1.16 var(--font-display);
+  letter-spacing: -0.03em; margin: var(--s-7) 0 0; color: var(--ink);
+}
+
+/* The Local Spend Record's printed slip: a real-looking slip, labelled hypothetical. */
+.slip { background: var(--bg); border: 1px solid var(--line); padding: var(--s-6); max-width: 440px; }
+.slip__label { font: 500 var(--t-label)/1.4 var(--font-text); color: var(--muted); margin: 0 0 var(--s-4); }
+.slip__rows { margin: 0; padding: 0; list-style: none; font-variant-numeric: tabular-nums; }
+.slip__rows > li { display: flex; justify-content: space-between; gap: var(--s-4); padding-block: var(--s-2); border-bottom: 1px solid var(--line); }
+.slip__rows > li:last-child { border-bottom: 0; font-weight: 500; }
+
+/* The map's own type: the SVG scales with its frame, so the phone needs a larger user unit to
+   keep every label at 13px or more on screen. */
+@media (max-width: 639px) {
+  .map .mp-label, .map .mp-meta { font-size: 16px; }
+}

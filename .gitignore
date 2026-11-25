@@ -1,0 +1,7 @@
+# the checker's Chrome profiles and crops: build state, not the site
+.taste-skill/chrome-*/
+.taste-skill/consistency/
+shots/
+
+# a CSV exported from the Sheet on the way in
+export/

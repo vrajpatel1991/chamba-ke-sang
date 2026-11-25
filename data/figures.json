@@ -1,0 +1,83 @@
+{
+  "note": "Every number shown as a fact carries a source here. A figure with no source, or marked verified false, is never rendered. The blocked list holds figures that circulate in the project and must never be published until a source document exists.",
+  "figures": [
+    {
+      "id": "notonmap-mystic",
+      "value": "₹1,980 a night",
+      "says": "The published nightly price of the ridge base.",
+      "verified": true,
+      "source": "NotOnMap listing, notonmap.com/property/mytsic-village",
+      "checkedOn": "2026-11-24"
+    },
+    {
+      "id": "notonmap-h2o",
+      "value": "₹5,999 a night",
+      "says": "The published nightly price of the river base.",
+      "verified": true,
+      "source": "NotOnMap listing, notonmap.com/property/h20-house",
+      "checkedOn": "2026-11-24"
+    },
+    {
+      "id": "notonmap-mystic-impact",
+      "value": "about 2 km",
+      "says": "The walk in to the ridge base from the road at Rota.",
+      "verified": true,
+      "source": "NotOnMap, notonmap.com/impact/mysticvillage",
+      "checkedOn": "2026-11-24"
+    },
+    {
+      "id": "inception-altitude",
+      "value": "about 2,200 m",
+      "says": "The altitude of the ridge village.",
+      "verified": true,
+      "source": "Inception Report, Mystic Village, section 6",
+      "checkedOn": "2026-11-24"
+    },
+    {
+      "id": "inception-capacity",
+      "value": "12 guests",
+      "says": "The largest group the ridge can host today before a campsite is needed.",
+      "verified": true,
+      "source": "Inception Report, section 6, and the room supply note in the strategic proposal",
+      "checkedOn": "2026-11-24"
+    },
+    {
+      "id": "inception-panchayats",
+      "value": "13 panchayats",
+      "says": "The size of the Cluster 1 pilot NotOnMap runs with the District Development Officer.",
+      "verified": true,
+      "source": "Inception Report, sections 1 to 3",
+      "checkedOn": "2026-11-24"
+    },
+    {
+      "id": "survey-partnership",
+      "value": "three years",
+      "says": "How long NotOnMap has been knowledge partner to the Himalay Unnati Mission.",
+      "verified": true,
+      "source": "Survey Report, Khajjiar Cluster 2025, section III",
+      "checkedOn": "2026-11-24"
+    },
+    {
+      "id": "tribune-khajjiar-road",
+      "value": "22 km",
+      "says": "The Khajjiar to Dalhousie road.",
+      "verified": true,
+      "source": "The Tribune, Himachal weekend traffic report",
+      "checkedOn": "2026-11-24"
+    },
+    {
+      "id": "homestay-rules-2025",
+      "value": "2025",
+      "says": "The Himachal Pradesh Home Stay Rules every bookable stay registers under.",
+      "verified": true,
+      "source": "Himachal Pradesh Home Stay Rules, notified 25 June 2025",
+      "checkedOn": "2026-11-24"
+    }
+  ],
+  "blocked": [
+    { "value": "87%", "says": "A guest satisfaction rate quoted in Plan.xlsx", "reason": "No source document. Never publish." },
+    { "value": "3x", "says": "A repeat-booking multiple quoted in Plan.xlsx", "reason": "No source document. Never publish." },
+    { "value": "129 room nights", "says": "May to June 2026 room nights quoted in Plan.xlsx", "reason": "No source document, and it contradicts the Inception Report. Never publish." },
+    { "value": "₹1.7L", "says": "May to June 2026 revenue quoted in Plan.xlsx", "reason": "No source document. Never publish." }
+  ]
+}

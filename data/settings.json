@@ -1,0 +1,29 @@
+{
+  "siteName": "Chamba ke sang",
+  "tagline": "in the company of Chamba",
+  "operator": {
+    "name": "NotOnMap",
+    "legalName": "Unknown Destinations Pvt Ltd",
+    "district": "Chaminoo, Barour, Chamba",
+    "state": "Himachal Pradesh",
+    "url": "https://www.notonmap.com",
+    "mapSearch": "https://www.openstreetmap.org/search?query=Chaminoo+Barour+Chamba"
+  },
+  "formEndpoint": "",
+  "mailFallback": "holddates@chambakesang.example",
+  "whatsapp": "",
+  "replyTime": "within a day",
+  "rates": {
+    "approved": false,
+    "onRequest": "Net rates on request"
+  },
+  "capacity": {
+    "ridge": { "maxGuests": 12, "confirmed": true, "source": "inception-capacity" },
+    "river": { "maxGuests": null, "confirmed": false, "note": "Rooms and beds at the river base are not confirmed. Ask us before you quote a group." }
+  },
+  "credits": {
+    "photographs": "Chalo Chamba and NotOnMap",
+    "line": ""
+  },
+  "lastReviewed": "2026-11-24"
+}

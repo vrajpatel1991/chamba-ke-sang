@@ -1,0 +1,196 @@
+{
+  "frame": {
+    "width": 100,
+    "height": 100,
+    "note": "A schematic frame, not a projection. No household location is published: a base is drawn at the head of its valley or ridge, never at its door."
+  },
+  "places": [
+    {
+      "id": "h2o-house",
+      "name": "H2O House",
+      "kind": "base",
+      "label": "River base",
+      "x": 82,
+      "y": 26,
+      "altitudeM": null,
+      "description": "An ancestral property on the Saal river below Chamba: five rustic huts built over the water and two sitting rooms.",
+      "arrival": "The host collects guests from the Chamba bus stand.",
+      "locationConfirmed": false,
+      "locationNote": "The village and the road time from Chamba are not confirmed. We show it as the river base near Chamba until they are.",
+      "url": "https://notonmap.com/property/h20-house",
+      "priceFrom": {
+        "amount": 5999,
+        "currency": "INR",
+        "unit": "a night",
+        "source": "notonmap-h2o"
+      },
+      "tier": 2,
+      "hostIds": [
+        "h2o-family"
+      ],
+      "standardMet": true,
+      "rooms": {
+        "count": 5,
+        "unit": "huts",
+        "bedsConfirmed": false
+      },
+      "seasonText": "All year",
+      "photoSlot": "h2o-house-from-the-river.jpg",
+      "excludedType": null,
+      "labelAnchor": "end",
+      "labelDy": -14
+    },
+    {
+      "id": "mystic-village",
+      "name": "Mystic Village",
+      "kind": "base",
+      "label": "Ridge base",
+      "x": 48,
+      "y": 46,
+      "altitudeM": 2200,
+      "description": "A 200-year-old Gaddi village at Bhaloli on the Khajjiar ridge: five mud-and-slate houses and two handcrafted cottages, run as a community homestay.",
+      "arrival": "Road from Khajjiar to Rota, then about a 2 km walk in through deodar.",
+      "locationConfirmed": true,
+      "url": "https://notonmap.com/property/mytsic-village",
+      "priceFrom": {
+        "amount": 1980,
+        "currency": "INR",
+        "unit": "a night",
+        "source": "notonmap-mystic"
+      },
+      "tier": 2,
+      "hostIds": [
+        "village-guides-mystic"
+      ],
+      "standardMet": true,
+      "rooms": {
+        "count": 7,
+        "unit": "houses and cottages",
+        "bedsConfirmed": false
+      },
+      "seasonText": "March to November",
+      "photoSlot": "mystic-village-houses.jpg",
+      "excludedType": null,
+      "labelAnchor": "end",
+      "labelDy": -8
+    },
+    {
+      "id": "chamba-town",
+      "name": "Chamba town",
+      "kind": "town",
+      "label": "Town",
+      "x": 70,
+      "y": 40,
+      "description": "The old hill capital on the Ravi: the Chaugan, the Laxmi Narayan temples and the rumal, chappal and metal workshops.",
+      "labelAnchor": "start",
+      "labelDy": -6
+    },
+    {
+      "id": "khajjiar",
+      "name": "Khajjiar",
+      "kind": "town",
+      "label": "Day-trip stop",
+      "x": 42,
+      "y": 54,
+      "description": "The meadow every day trip stops at. The road to the ridge base turns off here.",
+      "labelAnchor": "end",
+      "labelDy": 10
+    },
+    {
+      "id": "dalhousie",
+      "name": "Dalhousie",
+      "kind": "town",
+      "label": "Hotels",
+      "x": 28,
+      "y": 70,
+      "description": "Where most guests already have a bed when they first hear of us.",
+      "labelAnchor": "start",
+      "labelDy": 6
+    },
+    {
+      "id": "chamba-bus-stand",
+      "name": "Chamba bus stand",
+      "kind": "arrival",
+      "label": "Arrival",
+      "x": 72,
+      "y": 47,
+      "description": "Where the river base collects guests.",
+      "labelAnchor": "end",
+      "labelDy": 28,
+      "shortName": "Bus stand"
+    },
+    {
+      "id": "pathankot",
+      "name": "Pathankot",
+      "kind": "arrival",
+      "label": "Railhead",
+      "x": 8,
+      "y": 92,
+      "description": "The railhead. Most guests arrive on the overnight train from Delhi.",
+      "labelAnchor": "start",
+      "labelDy": 4
+    }
+  ],
+  "legs": [
+    {
+      "from": "pathankot",
+      "to": "dalhousie",
+      "km": 80,
+      "minutes": 150,
+      "confirmed": false,
+      "mode": "road"
+    },
+    {
+      "from": "dalhousie",
+      "to": "khajjiar",
+      "km": 22,
+      "minutes": 60,
+      "confirmed": true,
+      "mode": "road",
+      "source": "tribune-khajjiar-road"
+    },
+    {
+      "from": "khajjiar",
+      "to": "chamba-town",
+      "km": 24,
+      "minutes": 75,
+      "confirmed": false,
+      "mode": "road"
+    },
+    {
+      "from": "chamba-town",
+      "to": "chamba-bus-stand",
+      "km": 0,
+      "minutes": 0,
+      "confirmed": true,
+      "mode": "walk"
+    },
+    {
+      "from": "chamba-bus-stand",
+      "to": "h2o-house",
+      "km": null,
+      "minutes": null,
+      "confirmed": false,
+      "mode": "road"
+    },
+    {
+      "from": "khajjiar",
+      "to": "mystic-village",
+      "km": 2,
+      "minutes": 45,
+      "confirmed": true,
+      "mode": "road and walk",
+      "source": "notonmap-mystic-impact",
+      "note": "Road to Rota, then about a 2 km walk in."
+    },
+    {
+      "from": "h2o-house",
+      "to": "mystic-village",
+      "km": null,
+      "minutes": null,
+      "confirmed": false,
+      "mode": "road and walk",
+      "route": "stitch"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "note": "Consent is recorded per person, in Hindi or the local dialect, and renewed every year. Four separate permissions: hosting, photos, name on listings, name on records. A name is shown on the site only when listing is true; otherwise the role is shown. Nobody's earnings are ever shown.",
+  "hosts": [
+    {
+      "id": "h2o-family",
+      "name": null,
+      "role": "the host family at the river base",
+      "base": "h2o-house",
+      "consent": { "hosting": true, "photos": false, "listing": false, "records": false },
+      "consentRecordedOn": "2026-11-24",
+      "consentNote": "Hosting consent stands on the provider agreement for the live listing. The family's names are not published until each person has signed."
+    },
+    {
+      "id": "village-guides-mystic",
+      "name": null,
+      "role": "the village guides of Mystic Village",
+      "base": "mystic-village",
+      "consent": { "hosting": true, "photos": false, "listing": false, "records": false },
+      "consentRecordedOn": "2026-11-24",
+      "consentNote": "The village walk is a live listing run by the guides in turn."
+    },
+    {
+      "id": "breakfast-hosts",
+      "name": null,
+      "role": "the households who cook the community breakfast",
+      "base": "h2o-house",
+      "consent": { "hosting": true, "photos": false, "listing": false, "records": false },
+      "consentRecordedOn": "2026-11-24"
+    },
+    {
+      "id": "town-guide",
+      "name": null,
+      "role": "a licensed guide in Chamba town",
+      "base": "chamba-town",
+      "consent": { "hosting": true, "photos": false, "listing": false, "records": false },
+      "consentRecordedOn": "2026-11-24"
+    },
+    {
+      "id": "ashram",
+      "name": null,
+      "role": "the Art of Living ashram near the river base",
+      "base": "h2o-house",
+      "consent": { "hosting": true, "photos": false, "listing": false, "records": false },
+      "consentRecordedOn": "2026-11-24"
+    },
+    {
+      "id": "trail-guide",
+      "name": null,
+      "role": "a trained village guide on the H2O trail",
+      "base": "h2o-house",
+      "consent": { "hosting": true, "photos": false, "listing": false, "records": false },
+      "consentRecordedOn": "2026-11-24",
+      "consentNote": "Guide training and the transcription of the plant notebook are not finished, so the walk is in development."
+    },
+    {
+      "id": "trail-team-saal",
+      "name": null,
+      "role": "the trail and community teams in Saal Valley",
+      "base": "h2o-house",
+      "consent": { "hosting": true, "photos": false, "listing": false, "records": false },
+      "consentRecordedOn": "2026-11-24"
+    },
+    {
+      "id": "chukh-maker",
+      "name": null,
+      "role": "a Chamba Chukh maker in the ridge village",
+      "base": "mystic-village",
+      "consent": { "hosting": false, "photos": false, "listing": false, "records": false },
+      "consentNote": "Named in the People's Profile. Consent is asked for in the December field round."
+    },
+    {
+      "id": "kitchen-mystic",
+      "name": null,
+      "role": "the kitchen that cooks Siddu in the ridge village",
+      "base": "mystic-village",
+      "consent": { "hosting": false, "photos": false, "listing": false, "records": false },
+      "consentNote": "Consent is asked for in the December field round."
+    },
+    {
+      "id": "weavers-shg",
+      "name": null,
+      "role": "the women's self-help group of the ridge village",
+      "base": "mystic-village",
+      "consent": { "hosting": false, "photos": false, "listing": false, "records": false },
+      "consentNote": "The group agrees its own listing at a village meeting before any session is sold."
+    },
+    {
+      "id": "pine-needle-maker",
+      "name": null,
+      "role": "a pine-needle and chakla maker in the ridge village",
+      "base": "mystic-village",
+      "consent": { "hosting": false, "photos": false, "listing": false, "records": false }
+    },
+    {
+      "id": "folk-singers",
+      "name": null,
+      "role": "folk singers of the ridge village",
+      "base": "mystic-village",
+      "consent": { "hosting": false, "photos": false, "listing": false, "records": false },
+      "consentNote": "An evening happens only when the singers want to host one. It is never sold as a show."
+    },
+    {
+      "id": "rumal-artisan",
+      "name": null,
+      "role": "a GI-registered Chamba Rumal artisan",
+      "base": "chamba-town",
+      "consent": { "hosting": false, "photos": false, "listing": false, "records": false },
+      "consentNote": "No rumal artisan is a partner yet. This is the first thing the December round has to settle."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "note": "The shapes the planner builds into. A shape says which base each night is at and where the day goes; the planner fills the sessions from the catalogue.",
+  "journeys": [
+    {
+      "id": "river-3",
+      "name": "River tier, 3 nights",
+      "nights": 3,
+      "arriveBase": "h2o-house",
+      "suitability": { "youngChildren": true, "lowMobility": true },
+      "days": [
+        { "day": 1, "base": "h2o-house", "note": "Arrive. Collected at the Chamba bus stand." },
+        { "day": 2, "base": "h2o-house", "note": "The valley." },
+        { "day": 3, "base": "chamba-town", "note": "A day out, back to the river for the night." },
+        { "day": 4, "base": "h2o-house", "note": "Breakfast, then the drop to Chamba." }
+      ]
+    },
+    {
+      "id": "ridge-3",
+      "name": "Ridge tier, 3 nights",
+      "nights": 3,
+      "arriveBase": "mystic-village",
+      "suitability": { "youngChildren": false, "lowMobility": false },
+      "days": [
+        { "day": 1, "base": "mystic-village", "note": "Arrive. Road to Rota, then the walk in." },
+        { "day": 2, "base": "mystic-village", "note": "The ridge." },
+        { "day": 3, "base": "chamba-town", "note": "A day out, back to the ridge for the night." },
+        { "day": 4, "base": "mystic-village", "note": "The walk out and the drop." }
+      ]
+    },
+    {
+      "id": "river-6",
+      "name": "River base, 6 nights",
+      "nights": 6,
+      "arriveBase": "h2o-house",
+      "suitability": { "youngChildren": true, "lowMobility": true },
+      "days": [
+        { "day": 1, "base": "h2o-house", "note": "Arrive at the river." },
+        { "day": 2, "base": "h2o-house", "note": "The valley." },
+        { "day": 3, "base": "chamba-town", "note": "The town that made the crafts." },
+        { "day": 4, "base": "h2o-house", "note": "The river, unscheduled." },
+        { "day": 5, "base": "h2o-house", "note": "The valley's knowledge." },
+        { "day": 6, "base": "chamba-town", "note": "A second day in town." },
+        { "day": 7, "base": "h2o-house", "note": "Breakfast, then the drop to Chamba." }
+      ]
+    },
+    {
+      "id": "river-to-ridge-6",
+      "name": "River to ridge, 6 nights",
+      "nights": 6,
+      "arriveBase": "h2o-house",
+      "suitability": { "youngChildren": false, "lowMobility": false },
+      "days": [
+        { "day": 1, "base": "h2o-house", "note": "Arrive at the river." },
+        { "day": 2, "base": "chamba-town", "note": "The town that made the crafts." },
+        { "day": 3, "base": "h2o-house", "note": "The valley's knowledge." },
+        { "day": 4, "base": "mystic-village", "note": "Up to the ridge. The one move.", "moveFrom": "h2o-house" },
+        { "day": 5, "base": "mystic-village", "note": "The kitchen." },
+        { "day": 6, "base": "mystic-village", "note": "The second session with the same teacher." },
+        { "day": 7, "base": "mystic-village", "note": "Sunrise, the walk out, the drop." }
+      ]
+    }
+  ]
+}
