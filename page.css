@@ -133,3 +133,6 @@
 
 /* Nine lines of form and three of what follows: one step closer keeps the section on its screen. */
 #book .form { gap: var(--s-3); }
+
+/* The painted figures stand either side of the doorway, low in the frame. */
+.trips__pic > img { object-position: 50% 74%; }
