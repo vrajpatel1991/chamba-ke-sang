@@ -2,10 +2,10 @@
  "page": "index.html",
  "url": null,
  "root": null,
- "kind": "place",
- "category": "village stays and craft sessions in Chamba",
- "primary": "Hold dates",
+ "kind": "service",
+ "category": "an 8-day community trip in Chamba",
+ "primary": "Ask about dates",
  "rounds": 3,
- "start": "2026-11-25T08:10:46.678Z",
+ "start": "2026-11-26T04:59:29.148Z",
  "by": "gate.mjs --start"
 }

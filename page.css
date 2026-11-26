@@ -1,53 +1,32 @@
-/* Page CSS: only what the kit lacks and what sits inside a visual.
-   Every value is a system token. No second scale, radius, button or card style. */
+/* Page CSS: only what the kit lacks. Every value is a system token. No second scale, radius,
+   button or card style. */
 
-/* The one display-type moment: the district set large under the visit h2 (sections.md section 4). */
-.type-moment {
-  font: var(--display-weight) clamp(34px, 4.6vw, 68px)/1.08 var(--font-display);
-  letter-spacing: -0.03em;
-  margin: 0 0 var(--s-6);
-}
-.type-moment a { display: block; color: inherit; text-decoration: none; }
+/* The three promises: what the trip counts, said once, across the row. */
+.promises { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-6); margin: 0 0 var(--s-6); }
+.promises > div { display: grid; gap: var(--s-2); align-content: start; border-top: 1px solid var(--line); padding-top: var(--s-4); }
+.promises dt { font-weight: 500; color: var(--ink); }
+.promises dd { margin: 0; color: var(--ink); font-size: var(--t-small); line-height: 1.6; }
+@media (max-width: 639px) { .promises { grid-template-columns: minmax(0, 1fr); gap: var(--s-5); } }
 
-/* A head row whose side line starts on a column, so every block stands on the page's lines. */
-.head-row { margin-bottom: var(--head-gap); }
-.head-row > p { align-self: end; margin: 0; }
+.trips-label { color: var(--muted); margin: 0 0 var(--s-3); }
 
-/* The catalogue's two groups and two photographs take two screens where the columns narrow. */
-@media (min-width: 640px) and (max-width: 1023px) { #shapes { --h: 2; } }
-/* From 640 to 1279 the columns narrow: each block takes half the row, and from 1024 the section
-   takes two screens, since the stacked rows and the photograph need them. */
-@media (min-width: 1024px) and (max-width: 1279px) { #catalogue, #offer { --h: 2; } }
-@media (min-width: 640px) and (max-width: 1279px) {
-  #catalogue [data-group], #catalogue .pl-photo { grid-column: span 6; }
-}
-@media (max-width: 639px) { #catalogue .pl-photo > img { aspect-ratio: 4 / 3; } }
-
-/* The tablet stacks every split, which makes a full-width picture very tall. Holding the picture to
-   eight columns keeps each section on one tablet screen (layout-v4.md section 2, the tablet table). */
-@media (min-width: 640px) and (max-width: 1023px) {
-  #visit #map-frame, #offer .pl-photo, #hold .pl-photo { grid-column: 1 / span 6; }
-}
-
-/* The chip row that picks a partner type, and the one that picks a base. One component, used twice. */
-/* The chips sit on the grid's columns, so every edge is one the page already uses. */
-.switch { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-3); margin-bottom: var(--s-6); }
-.switch--tight { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* The chips that choose a version of the trip. They sit on the grid's columns. */
+.switch { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s-3); margin-bottom: var(--s-6); }
+@media (max-width: 1023px) { .switch { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 639px) { .switch { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .switch a {
   display: flex; align-items: center; justify-content: center; min-height: 48px;
-  padding: var(--s-2) var(--s-4); text-align: center;
+  padding: var(--s-2) var(--s-3); text-align: center;
   border: 1px solid var(--line);
   border-radius: var(--r-sm);
   color: var(--ink); text-decoration: none;
-  font-size: var(--t-body); line-height: 1.4;
+  font-size: var(--t-small); line-height: 1.3;
   transition: background 180ms var(--ease), border-color 180ms var(--ease);
 }
 .switch a:hover { border-color: var(--ink); }
 .switch a[aria-current="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
-.switch--tight { margin-bottom: var(--s-4); }
 
-/* A partner's six answers, as a ruled list on the section's ground. */
+/* Who a version suits, and what it changes. */
 .answers { display: grid; gap: 0; margin: 0; }
 .answers > div {
   display: grid; grid-template-columns: minmax(0, 170px) minmax(0, 1fr);
@@ -55,97 +34,102 @@
   padding-block: var(--s-3);
   border-bottom: 1px solid var(--line);
 }
-.answers > div:first-child { padding-top: 0; }
+.answers > div:first-child { padding-top: 0; border-top: 1px solid var(--line); padding-top: var(--s-4); }
 .answers dt { color: var(--muted); }
-.answers dd { margin: 0; color: var(--ink); max-width: 56ch; }
+.answers dd { margin: 0; color: var(--ink); max-width: 64ch; }
 @media (max-width: 639px) { .answers > div { grid-template-columns: minmax(0, 1fr); } }
 
-/* The drawn map: no service, no key, no tile. It is a diagram of the district, never a street. */
-.map { display: block; width: 100%; background: var(--surface); }
-.map svg { display: block; width: 100%; height: auto; }
-.map .mp-line { fill: none; stroke: var(--line-strong, var(--muted)); stroke-width: 1.5; }
-.map .mp-stitch { fill: none; stroke: var(--ink); stroke-width: 1.6; stroke-dasharray: 6 4; stroke-linecap: round; }
-.map .mp-dot { fill: var(--ink); }
-.map .mp-dot--arrival { fill: none; stroke: var(--ink); stroke-width: 1.5; }
-.map .mp-label { font: 500 13px/1.2 var(--font-text); fill: var(--ink); }
-.map .mp-meta { font: 400 13px/1.2 var(--font-text); fill: var(--muted); }
-.map .mp-base.is-on .mp-dot { fill: var(--ink); }
-.map .mp-base.is-on .mp-ring { fill: none; stroke: var(--accent); stroke-width: 3; }
-.map .mp-ring { fill: none; stroke: none; }
+/* The practical facts beside the days: how you get in, out, and when. */
+.facts { display: grid; gap: 0; margin: 0; }
+.facts > div { display: grid; gap: 2px; padding-block: var(--s-3); border-bottom: 1px solid var(--line); }
+.facts > div:first-child { padding-top: 0; }
+.facts dt { color: var(--muted); font-size: var(--t-small); }
+.facts dd { margin: 0; color: var(--ink); font-size: var(--t-small); line-height: 1.5; }
 
-/* The day list on journey.html: the running stitch joins one day to the next. */
-.days { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
-.days > li { position: relative; padding: var(--s-4) 0 var(--s-4) var(--s-6); border-bottom: 1px solid var(--line); }
-.days > li:first-child { padding-top: 0; }
-.days > li::before {
-  content: ""; position: absolute; left: 7px; top: var(--s-4); bottom: calc(-1 * var(--s-4));
+/* The eight days. One running line joins a day to the next, the way a rumal's stitch runs. */
+.days { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; counter-reset: day; }
+.day { position: relative; padding: var(--s-7) 0; border-bottom: 1px solid var(--line); }
+.day:first-child { padding-top: 0; }
+.day::before {
+  content: ""; position: absolute; left: -17px; top: var(--s-7); bottom: calc(-1 * var(--s-7));
   border-left: 1.6px dashed var(--ink);
 }
-.days > li:first-child::before { top: 6px; }
-.days > li:last-child::before { display: none; }
-.days > li::after {
-  content: ""; position: absolute; left: 3px; top: var(--s-4);
+.day:first-child::before { top: 10px; }
+.day:last-child { border-bottom: 0; }
+.day:last-child::before { display: none; }
+.day::after {
+  content: ""; position: absolute; left: -21px; top: var(--s-7);
   width: 9px; height: 9px; border-radius: 999px; background: var(--ink);
 }
-.days > li:first-child::after { top: 6px; }
-.day__head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s-4); }
-.day__base { color: var(--muted); font-size: var(--t-small); }
-.day__sessions { margin: var(--s-2) 0 0; padding: 0; list-style: none; color: var(--ink); }
-.day__sessions > li { padding-block: 2px; }
-.day__when { color: var(--muted); }
+.day:first-child::after { top: 10px; }
 
-.day__line { margin: var(--s-2) 0 0; color: var(--ink); }
+.day__head { display: grid; gap: var(--s-2); margin-bottom: var(--s-5); max-width: 62ch; }
+.day__n { color: var(--muted); margin: 0; }
+.day__head h3 { font: var(--display-weight) var(--t-h3)/1.2 var(--font-display); letter-spacing: var(--display-tracking); margin: 0; }
+.day__mark { margin: 0; color: var(--ink); }
+.day__mark [lang="hi"] { color: var(--ink); }
 
-/* The hold-dates form carries the nine fields the brief names, so its rows sit one step closer. */
-#hold .form { gap: var(--s-3); }
+.day__body { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-5); }
+@media (max-width: 1023px) { .day__body { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 639px) { .day__body { grid-template-columns: minmax(0, 1fr); gap: var(--s-4); } }
+.day__col > .t-label { color: var(--muted); margin: 0 0 var(--s-2); }
+.day__col > p { margin: 0 0 var(--s-2); font-size: var(--t-small); line-height: 1.6; }
+.day__list { margin: 0; padding: 0; list-style: none; font-size: var(--t-small); line-height: 1.6; }
+.day__list > li { padding-block: 3px; }
+.day__count { color: var(--ink); }
+.day__count strong { color: var(--ink); font-weight: 500; }
+.day__swaps { margin-top: var(--s-3); color: var(--ink); font-size: var(--t-small); line-height: 1.6; }
+.day__when { color: var(--ink); }
+.day__tonight-label { margin-top: var(--s-4); }
 
-/* The two link lines belong to the heading above them, not to the groups below. */
-#catalogue .section-head + .t-small { margin-bottom: var(--s-7); }
+/* What you leave behind, counted. */
+.counts { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s-4); margin: 0 0 var(--s-6); }
+@media (max-width: 639px) { .counts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-5); } }
+.counts > div { display: grid; gap: var(--s-1); align-content: start; }
+.counts dt { font: var(--display-weight) var(--t-stat)/1 var(--font-display); color: var(--ink); font-variant-numeric: tabular-nums; }
+.counts dd { margin: 0; color: var(--ink); font-size: var(--t-small); line-height: 1.4; min-height: 2.9em; }
 
-/* The catalogue's two groups stand beside each other, so their rows keep one height. */
-#catalogue .rows > li { min-height: 136px; align-content: start; }
+/* A head row whose side block starts on a column, so every block stands on the page's lines. */
+.head-row { margin-bottom: var(--head-gap); }
+.head-row > .facts { align-self: end; }
 
-/* A block merged into the section above as its last element. */
-.merged-block { margin-top: var(--s-9); display: grid; gap: var(--s-4); }
-
-/* The planner's controls: the system's fields, laid out in one row beside the h2. */
-.plan-inputs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s-4); margin: 0; }
-@media (max-width: 1023px) { .plan-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 639px) { .plan-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-3); } }
-
-/* What a partner copies, shown as it will be pasted. */
-.copy-block {
-  margin: var(--s-3) 0 0; padding: var(--s-5);
-  background: var(--bg); border: 1px solid var(--line);
-  font: 400 var(--t-small)/1.6 var(--font-text);
-  white-space: pre-wrap; overflow-wrap: break-word; color: var(--ink);
-}
-
-/* Two sections hold a list that grows: the planner's days change with the journey the visitor
-   builds, and the catalogue's rows change with the Sheet. Both keep their screens as a floor and
-   grow past them rather than lie on the section below. */
-#planner, #bookable { height: auto; min-height: calc(var(--h, 1) * 100svh); }
-@media (max-width: 639px) {
-  #planner, #bookable { min-height: calc(var(--hm, var(--h, 1)) * 100lvh); }
-}
-
-/* The footer's word list and the name set wide (footer-visit). */
-.footer__nav { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-5); margin: var(--s-4) 0 0; padding: 0; list-style: none; }
+.footer__nav { display: grid; gap: var(--s-2); margin: 0; padding: 0; list-style: none; }
 .footer__nav a { color: var(--ink); }
-.closing__links > .close__word {
-  font: var(--display-weight) min(10vw, 136px)/1.16 var(--font-display);
-  letter-spacing: -0.03em; margin: var(--s-7) 0 0; color: var(--ink);
+
+/* Four sections hold a list that grows with the trip: the eight days change with the version you
+   choose, and the rest follow the data. Each keeps its screens as a floor and grows past them
+   rather than lie on the section below. */
+#trips, #itinerary, #marks, #book, footer.closing {
+  height: auto;
+  min-height: calc(var(--h, 1) * 100svh);
 }
-
-/* The Local Spend Record's printed slip: a real-looking slip, labelled hypothetical. */
-.slip { background: var(--bg); border: 1px solid var(--line); padding: var(--s-6); max-width: 440px; }
-.slip__label { font: 500 var(--t-label)/1.4 var(--font-text); color: var(--muted); margin: 0 0 var(--s-4); }
-.slip__rows { margin: 0; padding: 0; list-style: none; font-variant-numeric: tabular-nums; }
-.slip__rows > li { display: flex; justify-content: space-between; gap: var(--s-4); padding-block: var(--s-2); border-bottom: 1px solid var(--line); }
-.slip__rows > li:last-child { border-bottom: 0; font-weight: 500; }
-
-/* The map's own type: the SVG scales with its frame, so the phone needs a larger user unit to
-   keep every label at 13px or more on screen. */
 @media (max-width: 639px) {
-  .map .mp-label, .map .mp-meta { font-size: 16px; }
+  #trips, #itinerary, #marks, #book, footer.closing {
+    height: auto;
+    min-height: calc(var(--hm, var(--h, 1)) * 100lvh);
+  }
 }
+
+/* The itinerary's one wide picture, from line to line above the days. */
+.itinerary__pic { margin: 0 0 var(--s-8); }
+
+/* In a half-row the five chips sit two or three to a line. */
+.switch--two { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: var(--s-5); }
+
+/* On a phone the trips picture stands taller, so the section still leads with a photograph. */
+@media (max-width: 639px) { .trips__pic > img { aspect-ratio: 9 / 10; } }
+
+/* On a phone the form and its picture stack, which takes two screens. */
+@media (max-width: 639px) { #book { --hm: 2; } }
+
+/* Stacked on a phone, the booking picture stands taller so the two screens are filled. */
+@media (max-width: 639px) { #book .pl-photo > img { aspect-ratio: 3 / 4; } }
+
+/* What happens after you ask, under the form. */
+.after { margin: var(--s-3) 0 0; padding: 0; list-style: none; color: var(--ink); font-size: var(--t-small); line-height: 1.5;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-4); }
+.after > li { border-top: 1px solid var(--line); padding-top: var(--s-2); }
+@media (max-width: 639px) { .after { grid-template-columns: minmax(0, 1fr); gap: var(--s-2); } }
+
+/* Nine lines of form and three of what follows: one step closer keeps the section on its screen. */
+#book .form { gap: var(--s-3); }

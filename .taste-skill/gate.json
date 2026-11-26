@@ -1,16 +1,34 @@
 {
- "start": "2026-11-25T08:10:46.678Z",
- "round": 0,
+ "start": "2026-11-26T04:59:29.148Z",
+ "round": 1,
  "idle": 0,
  "errors": 0,
  "status": "pass",
  "history": [
   {
-   "at": "2026-11-25T08:12:32.815Z",
+   "at": "2026-11-26T05:01:24.767Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 5,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-26T05:01:41.435Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 5,
+   "round": 1,
+   "reused": true,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-26T05:10:48.620Z",
    "mode": "manual",
    "status": "pass",
    "fails": 0,
-   "round": 0,
+   "round": 1,
    "reused": false,
    "stopHookActive": false
   }
@@ -20,40 +38,43 @@
   "page": "index.html",
   "url": null,
   "root": null,
-  "kind": "place",
-  "category": "village stays and craft sessions in Chamba",
-  "primary": "Hold dates",
+  "kind": "service",
+  "category": "an 8-day community trip in Chamba",
+  "primary": "Ask about dates",
   "rounds": 3,
-  "start": "2026-11-25T08:10:46.678Z",
+  "start": "2026-11-26T04:59:29.148Z",
   "by": "gate.mjs --start"
  },
  "manual": true,
- "fp": "8e42712a2e4652ed",
+ "roundKey": "63e959bc22e6b352:eed5de4d",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "05a03ef60a46d9f0",
  "page": "index.html",
  "found": {
   "fails": [
    {
-    "check": "scroll-reveal",
-    "where": "footer#contact > div.wrap > div.closing__cta.close--type > a.btn.btn--primary \"Hold dates\"",
-    "msg": "starts \"color\" (0.1 s) the moment it is scrolled into view (an IntersectionObserver)",
-    "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+    "check": "phone-number",
+    "where": "div.span-6.start-7 > ul.footer__nav > li:nth-of-type(3) > a \"https://wa.me/919599066404\"",
+    "msg": "a WhatsApp link calls a number in a real dialable format: \"https://wa.me/919599066404\"; a visitor can dial it and reach a stranger",
+    "fix": "drop the number and its tel: link (a \"Request a call\" form may stand in), unless the brief gives the number",
     "widths": [
-     1440,
-     390
+     1440
     ],
     "from": "consistency",
     "ids": [
-     "scroll-reveal"
+     "phone-number"
     ],
     "wheres": [
-     "footer#contact > div.wrap > div.closing__cta.close--type > a.btn.btn--primary \"Hold dates\""
+     "div.span-6.start-7 > ul.footer__nav > li:nth-of-type(3) > a \"https://wa.me/919599066404\""
     ]
    }
   ],
   "warns": [
    {
     "check": "scroll-reveal",
-    "where": "section#hold > div.wrap > div.grid.grid--top > figure.pl-photo.span-6",
+    "where": "section#book > div.wrap > div.grid.grid--top > figure.pl-photo.span-6",
     "msg": "starts an animation (1.6 s) the moment it is scrolled into view (an IntersectionObserver) on img (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)",
     "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
     "widths": [
@@ -63,10 +84,43 @@
     "from": "consistency"
    },
    {
-    "check": "copy-headings",
-    "where": "h2#hold-h \"Hold dates with NotOnMap\"",
-    "msg": "\"Hold dates with NotOnMap\" names no product, part, place or section (the one brand line a page may have)",
-    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+    "check": "scroll-reveal",
+    "where": "section#days \"Three valleys, eight days Four nights in\"",
+    "msg": "starts \"opacity\" (0.4 s) the moment it is scrolled into view (an IntersectionObserver) on div.mo-ph__words (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)",
+    "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "pinned",
+    "where": "section#days > div.wrap.mo-ph \"Three valleys, eight days Four nights in\"",
+    "msg": "held on screen for 2 screens of scroll (position: sticky) while the page moves on (inside a dealt moment's section, [data-moment]: expected on every kind, two moments at most, house rule; its still is judged under reduced motion)",
+    "fix": "let the section scroll with the page",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "no-visual",
+    "where": "section#trips \"Choose your trip\"",
+    "msg": "pictures, effects and mocks cover 16% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-headline",
+    "where": "h1#hero-h \"On Their Map: an 8-day trip in Chamba\"",
+    "msg": "the h1 has 9 words (2 to 8 read at a glance)",
+    "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words",
     "widths": [
      1440
     ],
@@ -74,8 +128,8 @@
    },
    {
     "check": "copy-buttons",
-    "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Hold dates\"",
-    "msg": "\"Hold dates\" does not start with a verb (book, buy, try, start, get, see...) (and 2 more like it: \"H2O House\", \"Tour operator or DMC\")",
+    "where": "div.grid.grid--top > div.span-6 > nav.switch.switch--two > a:nth-of-type(1) \"Give-back traveller\"",
+    "msg": "\"Give-back traveller\" does not start with a verb (book, buy, try, start, get, see...)",
     "fix": "label buttons with a verb and what the visitor gets (\"Book a room\", \"Start free trial\")",
     "widths": [
      1440
@@ -84,8 +138,8 @@
    },
    {
     "check": "section-gaps",
-    "where": "main#top > section.hero.hero--place / section#visit",
-    "msg": "296px between these sections, +30% against the median 228px",
+    "where": "main#top > section.hero.hero--photo / section#trips",
+    "msg": "113px between these sections, -37% against the median 178px",
     "fix": "use one gap between sections (all within 25% of each other)",
     "widths": [
      1440,
@@ -94,41 +148,10 @@
     "from": "consistency"
    },
    {
-    "check": "section-gaps",
-    "where": "section#visit / section#offer",
-    "msg": "uneven space at the edge of a band: 49px outside its edge, 117px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
-    "fix": "use one gap between sections (all within 25% of each other)",
-    "widths": [
-     1440,
-     390
-    ],
-    "from": "consistency"
-   },
-   {
-    "check": "links",
-    "where": "div.grid.grid--top > div.visit.visit--card > nav.switch.switch--tight > a:nth-of-type(1) \"H2O House\"",
-    "msg": "\"H2O House\" goes to #visit, the block it already sits in",
-    "fix": "point every link at a real section, page or file",
-    "widths": [
-     1440
-    ],
-    "from": "consistency"
-   },
-   {
-    "check": "links",
-    "where": "div.grid.grid--top > div.visit.visit--card > nav.switch.switch--tight > a:nth-of-type(2) \"Mystic Village\"",
-    "msg": "\"Mystic Village\" goes to #visit, the block it already sits in",
-    "fix": "point every link at a real section, page or file",
-    "widths": [
-     1440
-    ],
-    "from": "consistency"
-   },
-   {
-    "check": "photo-credit",
-    "where": "(the page text)",
-    "msg": "1 library source (wikimedia): the page credits wikimedia; confirm each shows the client's own product, place or people",
-    "fix": "confirm the library photograph shows the client's own product, place or people; otherwise replace it",
+    "check": "photo-set",
+    "where": "div.wrap > div.grid.grid--top > figure.pl-photo.span-6 > img \"gaddi-door-1200.jpg\"",
+    "msg": "7 photographs in more than one look: warm and cool photographs mixed (b* -5 to +22); the odd one out is gaddi-door-1200.jpg",
+    "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
     "widths": [
      1440
     ],
@@ -136,28 +159,8 @@
    },
    {
     "check": "nav-labels",
-    "where": "div.wrap.nav__bar > nav.nav__links > div.nav__item:nth-of-type(1) > a.nav__link \"Visit\"",
-    "msg": "\"Visit\" opens a section headed \"Getting to Chaminoo, Barour, Chamba\"",
-    "fix": "name each nav link after the heading of the section it opens",
-    "widths": [
-     1440
-    ],
-    "from": "consistency"
-   },
-   {
-    "check": "nav-labels",
-    "where": "div.nav__item:nth-of-type(3) > div.nav__menu > div.wrap.grid > a.menu-card.span-4:nth-of-type(1) \"River base From ₹5,999 a night\"",
-    "msg": "\"River base From ₹5,999 a night\" opens a section headed \"Stays and sessions\"",
-    "fix": "name each nav link after the heading of the section it opens",
-    "widths": [
-     1440
-    ],
-    "from": "consistency"
-   },
-   {
-    "check": "nav-labels",
-    "where": "div.nav__item:nth-of-type(3) > div.nav__menu > div.wrap.grid > a.menu-card.span-4:nth-of-type(2) \"Ridge base From ₹1,980 a night\"",
-    "msg": "\"Ridge base From ₹1,980 a night\" opens a section headed \"Stays and sessions\"",
+    "where": "div.wrap.nav__bar > nav.nav__links > div.nav__item:nth-of-type(2) > a.nav__link \"Route\"",
+    "msg": "\"Route\" opens a section headed \"Three valleys, eight days\"",
     "fix": "name each nav link after the heading of the section it opens",
     "widths": [
      1440
@@ -166,8 +169,8 @@
    },
    {
     "check": "label-centre",
-    "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Hold dates\"",
-    "msg": "its label sits 18px off-centre (25px of room at the left, 43px at the right) (and 1 more like it: \"Hold dates\")",
+    "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Ask about dates\"",
+    "msg": "its label sits 18px off-centre (25px of room at the left, 43px at the right) (and 1 more like it: \"Ask about dates\")",
     "fix": "centre the label in its button, or fill the empty side with an icon",
     "widths": [
      1440
@@ -186,8 +189,8 @@
    },
    {
     "check": "action-repeat",
-    "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"hold dates\"",
-    "msg": "\"hold dates\" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it",
+    "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"ask about dates\"",
+    "msg": "\"ask about dates\" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it",
     "fix": "show the action once a screen besides the nav's button: the hero's, the close's or the phone bar's, never all at once",
     "widths": [
      1440
@@ -196,8 +199,8 @@
    },
    {
     "check": "form-send",
-    "where": "div.wrap > div.grid.grid--top:nth-of-type(2) > div.span-6 > form.form \"mailto:holddates@chambakesang.example\"",
-    "msg": "the form opens a mail to holddates@chambakesang.example: a stand-in until the client gives its form address; list it in the report",
+    "where": "div.wrap > div.grid.grid--top:nth-of-type(2) > div.span-6 > form.form \"mailto:hello@notonmap.example\"",
+    "msg": "the form opens a mail to hello@notonmap.example: a stand-in until the client gives its form address; list it in the report",
     "fix": "send the form to the client's address (data-endpoint) and show the confirmation only after it answers; list a mailto stand-in in the report",
     "widths": [
      1440
@@ -206,7 +209,7 @@
    },
    {
     "check": "no-visual",
-    "where": "section#visit \"Getting to Chaminoo, Barour, Chamba\"",
+    "where": "section#marks \"Your Map of Marks\"",
     "msg": "pictures, effects and mocks cover 20% of this section; a feature section needs a visual (about 25% or more)",
     "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
     "widths": [
@@ -215,29 +218,9 @@
     "from": "consistency"
    },
    {
-    "check": "no-visual",
-    "where": "section#offer \"What a partner sells\"",
-    "msg": "pictures, effects and mocks cover 18% of this section; a feature section needs a visual (about 25% or more)",
-    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
-    "widths": [
-     390
-    ],
-    "from": "consistency"
-   },
-   {
-    "check": "no-visual",
-    "where": "section#catalogue \"Stays and sessions\"",
-    "msg": "pictures, effects and mocks cover 16% of this section; a feature section needs a visual (about 25% or more)",
-    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
-    "widths": [
-     390
-    ],
-    "from": "consistency"
-   },
-   {
     "check": "section-gaps",
-    "where": "section#hold / footer#contact",
-    "msg": "354px between these sections, +26% against the median 280px",
+    "where": "section#book / footer#contact",
+    "msg": "300px between these sections, +47% against the median 204px",
     "fix": "use one gap between sections (all within 25% of each other)",
     "widths": [
      390
@@ -245,40 +228,40 @@
     "from": "consistency"
    },
    {
-    "check": "section-gaps",
-    "where": "section#offer / section#catalogue",
-    "msg": "uneven space at the edge of a band: 94px outside its edge, 317px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
-    "fix": "use one gap between sections (all within 25% of each other)",
+    "check": "proximity",
+    "where": "section#marks > div.wrap > div.grid.grid--top > figure.pl-photo.span-6 \"About 90 days later, a note from the vil\"",
+    "msg": "stacked at this width, the visual starts 14px under the text and buttons above it (\"About 90 days later, a note fr\"): it reads glued to them",
+    "fix": "give the stacked split the section's own gap between text and visual (40px or more on a phone)",
     "widths": [
      390
     ],
     "from": "consistency"
    },
    {
-    "check": "photo-set",
-    "where": "div.wrap > div.grid.grid--top > figure.pl-photo.span-6 > img \"photo-f185667234-500.jpg\"",
-    "msg": "3 photographs in more than one look: saturation from 0.11 to 0.58; warm and cool photographs mixed (b* -20 to +5); the odd one out is photo-f185667234-500.jpg",
-    "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
+    "check": "proximity",
+    "where": "section#book > div.wrap > div.grid.grid--top > figure.pl-photo.span-6 \"Your name Email Which trip Give-back tra\"",
+    "msg": "stacked at this width, the visual starts 14px under the text and buttons above it (\"Your name Email Which trip Giv\"): it reads glued to them (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "give the stacked split the section's own gap between text and visual (40px or more on a phone)",
     "widths": [
      390
     ],
     "from": "consistency"
    },
    {
-    "check": "unit-break",
-    "where": "div.grid.grid--top > div.span-3.stack-4:nth-of-type(2) > ul.rows > li:nth-of-type(2) \"The walk in to the ridge about 2 km on f\"",
-    "msg": "\"2 km\" breaks across two lines: the number ends one line and its unit starts the next",
-    "fix": "keep a number with its unit: a no-break space (&nbsp;) between them",
+    "check": "orphan",
+    "where": "div.span-6 > form.form > ul.after.field--full > li:nth-of-type(2) \"Dates, the group size and the price are \"",
+    "msg": "its last line holds only \"you.\"",
+    "fix": "rebalance the text (text-wrap: pretty, or a shorter line) so the last line holds more than one short word",
     "widths": [
      390
     ],
     "from": "consistency"
    },
    {
-    "check": "empty-area",
-    "where": "footer#contact \"Chamba ke sang, in the company of Chamba\"",
-    "msg": "44% of the section is empty: 448px of empty rows between its content, 15% beside content that covers under half the container, in its 1491px of rows (WARN over 35%, FAIL over 50%)",
-    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "check": "photo-weight",
+    "where": "div.wrap.mo-ph > div.mo-ph__stage > figure.mo-ph__pic:nth-of-type(1) > img \"homestay-1200.jpg\"",
+    "msg": "3 photographs are 3x or more wider than drawn on the phone, with no srcset: homestay-1200.jpg is 1200px (368 KB) for a 342px frame; on a phone it arrives late and its frame shows only its ground until then",
+    "fix": "give each photograph srcset and sizes (a 800px and a 1600px file), or a smaller file: the frame never shows empty",
     "widths": [
      390
     ],
@@ -287,31 +270,30 @@
   ],
   "crashed": [],
   "seconds": {
-   "consistency": 100,
+   "consistency": 102,
    "layout": 5
   }
  },
  "open": [],
  "waived": [
   {
-   "check": "scroll-reveal",
-   "where": "footer#contact > div.wrap > div.closing__cta.close--type > a.btn.btn--primary \"Hold dates\"",
-   "msg": "starts \"color\" (0.1 s) the moment it is scrolled into view (an IntersectionObserver)",
-   "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+   "check": "phone-number",
+   "where": "div.span-6.start-7 > ul.footer__nav > li:nth-of-type(3) > a \"https://wa.me/919599066404\"",
+   "msg": "a WhatsApp link calls a number in a real dialable format: \"https://wa.me/919599066404\"; a visitor can dial it and reach a stranger",
+   "fix": "drop the number and its tel: link (a \"Request a call\" form may stand in), unless the brief gives the number",
    "widths": [
-    1440,
-    390
+    1440
    ],
    "from": "consistency",
    "ids": [
-    "scroll-reveal"
+    "phone-number"
    ],
    "wheres": [
-    "footer#contact > div.wrap > div.closing__cta.close--type > a.btn.btn--primary \"Hold dates\""
+    "div.span-6.start-7 > ul.footer__nav > li:nth-of-type(3) > a \"https://wa.me/919599066404\""
    ],
-   "reason": "Nothing on this page fades, rises or unmasks on scroll. The close repeats the main action word for word, which makes it a twin of the phone action bar, and system.js watches every twin with an IntersectionObserver so one screen never shows the action twice. The transition the check sees is the kit's own bar hiding itself; the button is still from the first paint and never moves."
+   "reason": "The brief gives this number. It is NotOnMap's own published WhatsApp Business line, printed on the back of the brochure this site is built from, and the rule in copy.md is phone numbers only where the brief gives one. It is a link to wa.me rather than a dialable tel:, and no digits are printed on the page."
   }
  ],
- "warnCount": 23,
- "at": "2026-11-25T08:12:32.816Z"
+ "warnCount": 19,
+ "at": "2026-11-26T05:10:48.621Z"
 }

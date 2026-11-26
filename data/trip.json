@@ -1,0 +1,664 @@
+{
+  "note": "On Their Map, as the brochure sets it out. The eight Marks are the same in every version of the trip: the valley, the impact, the people counted so far, where your share goes and where you sleep do not change. Only the day's title, what you do, who you meet and the swaps change. Edit a day here and every page that shows it changes.",
+
+  "trip": {
+    "name": "On Their Map",
+    "nameHindi": "उनके नक्शे पर",
+    "line": "You came looking for a place that isn't on the map. Leave with your name on theirs.",
+    "summary": "An 8-day, 7-night community trip with host families in three valleys of Chamba, Himachal Pradesh.",
+    "days": 8,
+    "nights": 7,
+    "valleys": ["Saal Valley", "Dwat Mahadev", "Khajjiar"],
+    "order": "The impact comes first, then what you do. Where you sleep comes last.",
+    "gettingIn": "Chamba town, then 9 km to Chaminoo",
+    "gettingOut": "Khajjiar to Dalhousie, 22 km",
+    "nightsSplit": "4 in Saal Valley, 3 in Khajjiar",
+    "seasons": "March to May, September to November",
+    "air": "Gaggal airport, Kangra (117 km)",
+    "rail": "Pathankot station (119 km)",
+    "note": "You stay four nights in Saal Valley and three in Khajjiar; Day 4 is a day trip to Dwat Mahadev. Travel times between the valleys are still being confirmed."
+  },
+
+  "promises": [
+    {
+      "title": "People impacted",
+      "line": "The local people your trip pays directly: hosts, cooks, guides and makers. The count grows on every day page."
+    },
+    {
+      "title": "A cause each day",
+      "line": "A set share of your trip goes to one named cause each day: a kitchen, a school or a new homestay."
+    },
+    {
+      "title": "Something stays behind",
+      "line": "An eco-brick in a village bench and a slate on the Feedback Tree. About 90 days later, a note from the village."
+    }
+  ],
+
+  "valleys": [
+    { "id": "saal", "name": "Saal Valley", "where": "Chaminoo · H2O House · Chamba town", "marks": [1, 2, 3] },
+    { "id": "dwat", "name": "Dwat Mahadev", "where": "The frontier valley", "marks": [4] },
+    { "id": "khajjiar", "name": "Khajjiar", "where": "Mystic Village · Pukhri", "marks": [5, 6, 7, 8] }
+  ],
+
+  "marks": [
+    {
+      "day": 1,
+      "mark": "Keep a 3rd-century water mill turning",
+      "short": "Water mill",
+      "valley": "Saal Valley",
+      "valleyId": "saal",
+      "hindi": "घराट चलता रहे",
+      "peopleSoFar": 3,
+      "impact": "Your flour and your dinner keep two things earning: a working gharat, and a family kitchen.",
+      "shareGoesTo": "Upkeep of the gharat",
+      "tonight": "H2O House, Chaminoo",
+      "photo": "gharat",
+      "alt": "H2O House in the evening: a stone and timber building beside the stream that drives its water mill, with a table set on the flagstones"
+    },
+    {
+      "day": 2,
+      "mark": "Open a new door",
+      "short": "A new door",
+      "valley": "Saal Valley",
+      "valleyId": "saal",
+      "hindi": "नया दरवाज़ा खुले",
+      "peopleSoFar": 6,
+      "impact": "Saal Valley's homes are new to guests. 4 of 11 are open, with 9 bookings so far. Your stay and your review help the next guest find them.",
+      "shareGoesTo": "The homestay itself. Your stay is the cause.",
+      "tonight": "A newly opened homestay, given in rotation (for example Saal River Homestay or Anuradha Kutteer)",
+      "photo": "homestay",
+      "alt": "A Saal Valley homestay above a stone retaining wall, its upper floor in carved timber, roses in flower by the steps"
+    },
+    {
+      "day": 3,
+      "mark": "Carry a craft forward",
+      "short": "Carry a craft",
+      "valley": "Saal Valley and Chamba town",
+      "valleyId": "saal",
+      "hindi": "हुनर आगे बढ़े",
+      "peopleSoFar": 10,
+      "impact": "A craft survives when someone pays for it. You learn from the maker, then you buy from the maker.",
+      "shareGoesTo": "The makers, directly",
+      "tonight": "Your Saal Valley homestay",
+      "photo": "gaddi-door",
+      "alt": "A yellow house front in Chamba town with two Gaddi figures painted either side of the doorway"
+    },
+    {
+      "day": 4,
+      "mark": "Be the first footprint",
+      "short": "First footprint",
+      "valley": "Dwat Mahadev Valley",
+      "valleyId": "dwat",
+      "hindi": "पहला क़दम",
+      "peopleSoFar": 12,
+      "impact": "NotOnMap has surveyed 21 panchayats here and spoken to 800+ residents. There are no guests yet. What you say helps decide what gets built first.",
+      "shareGoesTo": "Onboarding the valley's first hosts",
+      "tonight": "Your Saal Valley homestay (this is a day trip)",
+      "fallback": "If the valley isn't ready yet: Auda (\"Biscuit Point\"), with the Ghodawali Mata rock and crafts still in daily use: Kirodu baskets, Charkha spinning, Chakla mats.",
+      "photo": "chaminoo",
+      "alt": "A village courtyard house painted blue and green, maize drying in the yard, three residents talking on the step"
+    },
+    {
+      "day": 5,
+      "mark": "Keep the stove burning",
+      "short": "The stove",
+      "valley": "Khajjiar",
+      "valleyId": "khajjiar",
+      "hindi": "चूल्हा जलता रहे",
+      "peopleSoFar": 16,
+      "impact": "One more paid service for a kitchen the women own and run. It served 100+ guests in its first three months.",
+      "shareGoesTo": "SheKitchen, plus the village's own ₹20 Green Fee",
+      "tonight": "A host family's home in Mystic Village, given in rotation (for example Isro, Brahmi or Babli Devi Kuteer)",
+      "photo": "chullah",
+      "alt": "Cooking on a wood-fired chullah: dough pressed by hand, roti going onto the pan, a thali eaten on the kitchen floor"
+    },
+    {
+      "day": 6,
+      "mark": "Take plastic off a mountain",
+      "short": "Eco-bricks",
+      "valley": "Khajjiar",
+      "valleyId": "khajjiar",
+      "hindi": "पहाड़ से प्लास्टिक हटे",
+      "peopleSoFar": 19,
+      "impact": "Mystic Village wants to become Asia's cleanest village. Each eco-brick ends up in a bench, a wall or a garden.",
+      "shareGoesTo": "Eco-bricking and waste work",
+      "tonight": "A tent on the ridge, Dhaulapir campsite",
+      "photo": "campsite",
+      "alt": "Tents pitched on the grass at the Dhaulapir campsite, cloud coming over the deodar ridge behind"
+    },
+    {
+      "day": 7,
+      "mark": "Teach something, learn something back",
+      "short": "Teach and learn",
+      "valley": "Khajjiar",
+      "valleyId": "khajjiar",
+      "hindi": "सिखाइए, सीखिए",
+      "peopleSoFar": 23,
+      "impact": "The women set the terms. They choose what they want to learn from you. In return, they teach you a craft that earns them money.",
+      "shareGoesTo": "The village school",
+      "tonight": "A second host family's home, given in rotation",
+      "photo": "bonfire",
+      "alt": "A bonfire outside a village house at dusk, six people sitting round it on low benches"
+    },
+    {
+      "day": 8,
+      "mark": "Take a story home, leave yours behind",
+      "short": "A story home",
+      "valley": "Khajjiar",
+      "valleyId": "khajjiar",
+      "hindi": "कहानी साथ ले जाइए",
+      "peopleSoFar": 26,
+      "impact": "Folk stories survive when someone listens. Gaon ki Hatti sold out its stock last summer. Its members earned ₹12,000-15,000 each.",
+      "shareGoesTo": "Gaon ki Hatti, through what you buy",
+      "tonight": "Departure day",
+      "photo": "luanchadi",
+      "alt": "A woman in Gaddi dress, the Luanchadi, on the ridge with the valley behind her"
+    }
+  ],
+
+  "trips": [
+    {
+      "id": "give-back",
+      "label": "Give-back traveller",
+      "suits": "Couples, friends and solo travellers who want their trip to leave something behind.",
+      "changes": "The full set of Marks: farm days, the craft makers, the SheKitchen, the eco-brick and the village school.",
+      "default": true,
+      "days": [
+        {
+          "title": "Grind maize at a working water mill",
+          "do": [
+            "Arrive via Chamba town, 9 km away.",
+            "Walk Chaminoo's fields, past Kathkuni and mud homes.",
+            "Grind maize at the gharat, the water-driven stone mill that H2O House is built on.",
+            "At dinner, your flour becomes makki ki roti with saag at Meenu Ji's table.",
+            "Or try Binda Chacha's special chicken."
+          ],
+          "meet": ["The miller at H2O House", "Meenu Ji or Binda Chacha", "A guide from Chaminoo"],
+          "swaps": ["Rural photo walk", "Fishing in the Sal", "River walk along the Saal"]
+        },
+        {
+          "title": "Spend a farm day with a new homestay family",
+          "do": [
+            "Spend the day as part of the household.",
+            "Learn the basics of farming maize and wheat.",
+            "Harvest vegetables, and milk the cows at Rafi's House.",
+            "Afternoon: Chalo Khelo, traditional games with the village children.",
+            "Also today: a herbal healing session, or morning yoga by the river."
+          ],
+          "meet": ["A newly opened homestay family", "Rafi's family", "The village children"],
+          "swaps": ["Gurukul visit", "Walk to Vishnu Temple (1.5 km)", "Adventure day at Nomadic Hikes"]
+        },
+        {
+          "title": "Learn Chamba's crafts from their makers",
+          "do": [
+            "In Chamba town, sit with the women who stitch the GI-tagged Chamba rumal.",
+            "Meet the makers of the Chamba chappal.",
+            "Back at H2O House, paint and carve with valley artists in the open-air studio.",
+            "Also today: the 10th-century Lakshmi Narayan temples, and dusk on the Chaugan."
+          ],
+          "meet": ["The women who embroider the Chamba rumal", "The Chamba chappal makers", "Valley artists", "A Chamba guide"],
+          "swaps": ["Bhuri Singh Museum", "Minjar fair (Jul-Aug)", "Folk dance at a district fair"]
+        },
+        {
+          "title": "Walk and listen in Dwat Mahadev",
+          "do": [
+            "A session in the valley's own wellness traditions, including the Yogini traditions now being shaped into experiences.",
+            "A listening walk with residents.",
+            "Ask what they would like guests to see, and what guests should leave alone."
+          ],
+          "meet": ["Residents of Dwat Mahadev", "A local wellness guide, still being chosen"],
+          "swaps": []
+        },
+        {
+          "title": "Cook Gaddi food in a women-run kitchen",
+          "do": [
+            "Walk in under the deodars from Khajjiar via Pukhri, or take the 20-minute 4x4 ride with Manu Kumar or Kaka.",
+            "Cook Gaddi food on a wood-fire chullah, with clay pots and vegetables from the family farm.",
+            "Learn to make Chamba Chukh.",
+            "Eat on the kitchen floor: rajma, makki ki roti, saag."
+          ],
+          "meet": ["Shivani, Pooja and Team Udaan, who run the SheKitchen", "Your host family", "The 4x4 driver"],
+          "swaps": ["Food walk through five homes", "Siddu at Kaku di Rasoi", "Pickle-making"]
+        },
+        {
+          "title": "Clean up the village and make an eco-brick",
+          "do": [
+            "Start with a morning on the farm (drying maize, in autumn).",
+            "Join Team Parivartan's weekly cleanup and fill an eco-brick.",
+            "Turn waste into craft with Neelam Sharma, who teaches plastic upcycling at Lambo Devi Kuteer.",
+            "Evening: stargazing, then a night in a tent at the Dhaulapir campsite."
+          ],
+          "meet": ["Rajat and Team Parivartan", "Neelam Sharma", "The Dhaulapir campsite team"],
+          "swaps": ["Biodiversity trail", "Birdwatching on the ridge", "Pohlani Mata trek"]
+        },
+        {
+          "title": "Teach at the village school, learn a craft",
+          "do": [
+            "Morning: visit the area's only school. Share your work and help with a lesson.",
+            "Afternoon: swap skills with the women. You teach what they ask for.",
+            "They teach you pine-needle craft, weaving or crochet.",
+            "Also today: a Gaddi life walk with a villager, and sunrise over Kalatop."
+          ],
+          "meet": ["The women of Mystic Village", "The village school's teachers", "Your second host family"],
+          "swaps": ["Orchard walk with Amarchand", "Apple picking (in season)"]
+        },
+        {
+          "title": "Hear Gaddi folk tales and buy from local makers",
+          "do": [
+            "Dress in Gaddi clothes (Luanchadi or Chola-Dora).",
+            "Listen to folk tales and songs.",
+            "Buy what you learned to make.",
+            "Paint your slate for the Feedback Tree, then receive your Map of Marks.",
+            "On the way out: Khajjiar meadow and lake, then 22 km to Dalhousie."
+          ],
+          "meet": ["Shibo Devi or Brahmi Devi", "The makers of Gaon ki Hatti", "A guide to Khajjiar"],
+          "swaps": []
+        }
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "suits": "Parents with children. Each experience shows its youngest age.",
+      "changes": "Shorter walks, games with village children, rolling roti together and a night in a tent.",
+      "default": false,
+      "days": [
+        {
+          "title": "Watch a water mill grind your family's flour",
+          "do": [
+            "Arrive via Chamba town, 9 km away.",
+            "Take the gharat tour: watch the wooden wheel turn grain into flour (ages 5 and up).",
+            "A short walk through Chaminoo's fields, past Kathkuni and mud homes.",
+            "Evening: a riverside barbeque by lantern light on the stone deck (March to June, September to November).",
+            "Dinner: makki ki roti and saag at Meenu Ji's table."
+          ],
+          "meet": ["The miller at H2O House", "Meenu Ji or Binda Chacha", "A guide from Chaminoo"],
+          "swaps": ["Rural photo walk (ages 10 and up)", "River walk along the Saal"]
+        },
+        {
+          "title": "Spend a farm day with a new homestay family",
+          "do": [
+            "Spend the day as part of the household.",
+            "Help harvest vegetables, and milk the cows at Rafi's House.",
+            "Afternoon: Chalo Khelo, traditional games with the village children.",
+            "Grown-ups can add a herbal healing session (ages 12 and up)."
+          ],
+          "meet": ["A newly opened homestay family", "Rafi's family", "The village children"],
+          "swaps": ["Morning yoga by the river (ages 10 and up)", "Walk to Vishnu Temple (1.5 km)"]
+        },
+        {
+          "title": "Paint and carve with the valley's artists",
+          "do": [
+            "Paint and carve with valley artists in H2O House's open-air studio (ages 6 and up).",
+            "In Chamba town, sit with the women who stitch the GI-tagged Chamba rumal.",
+            "Meet the makers of the Chamba chappal.",
+            "Dusk on the Chaugan."
+          ],
+          "meet": ["The women who embroider the Chamba rumal", "The Chamba chappal makers", "Valley artists", "A Chamba guide"],
+          "swaps": ["Lakshmi Narayan temples", "Bhuri Singh Museum"]
+        },
+        {
+          "title": "Meet a valley that has no guests yet",
+          "do": [
+            "A short listening walk with residents.",
+            "Ask what they would like guests to see, and what guests should leave alone.",
+            "A session in the valley's own wellness traditions."
+          ],
+          "meet": ["Residents of Dwat Mahadev", "A local wellness guide, still being chosen"],
+          "swaps": []
+        },
+        {
+          "title": "Roll roti in a women-run kitchen",
+          "do": [
+            "Walk in under the deodars from Khajjiar via Pukhri (about 1.5 km), or take the 4x4.",
+            "Cook Gaddi food on a wood-fire chullah with the SheKitchen team.",
+            "Roll your own makki ki roti.",
+            "Eat together on the kitchen floor: rajma, makki ki roti, saag."
+          ],
+          "meet": ["Shivani, Pooja and Team Udaan, who run the SheKitchen", "Your host family", "The 4x4 driver"],
+          "swaps": ["Siddu at Kaku di Rasoi", "Food walk through five homes"]
+        },
+        {
+          "title": "Make an eco-brick and sleep under the stars",
+          "do": [
+            "Join Team Parivartan's weekly cleanup, at a child's pace.",
+            "Fill an eco-brick together. It ends up in a bench, a wall or a garden.",
+            "Make something from waste with Neelam Sharma.",
+            "Evening: stargazing, then a night in a tent at the Dhaulapir campsite."
+          ],
+          "meet": ["Rajat and Team Parivartan", "Neelam Sharma", "The Dhaulapir campsite team"],
+          "swaps": ["Birdwatching on the ridge (ages 8 and up)", "Sunset from the mountaintop"]
+        },
+        {
+          "title": "Swap skills with the women of Mystic Village",
+          "do": [
+            "Grown-ups (16 and up): swap skills with the women. You teach what they ask for.",
+            "They teach you pine-needle craft, weaving or crochet.",
+            "Children play Chalo Khelo games with the village children.",
+            "With children aged 12 and up, visit the village school and help with a lesson."
+          ],
+          "meet": ["The women of Mystic Village", "The village school's teachers", "Your second host family"],
+          "swaps": ["Orchard walk with Amarchand", "Apple picking (in season)"]
+        },
+        {
+          "title": "Dress in Gaddi clothes and hear the old stories",
+          "do": [
+            "Dress in Gaddi clothes (Luanchadi or Chola-Dora).",
+            "Listen to folk tales and songs.",
+            "Buy what you learned to make at Gaon ki Hatti.",
+            "Paint your family's slate for the Feedback Tree, then receive your Map of Marks."
+          ],
+          "meet": ["Shibo Devi or Brahmi Devi", "The makers of Gaon ki Hatti", "A guide to Khajjiar"],
+          "swaps": []
+        }
+      ]
+    },
+    {
+      "id": "trekker",
+      "label": "Trekker",
+      "suits": "Walkers and small groups who want longer days on hill paths.",
+      "changes": "Walks along the rivers, an adventure day, the longer Rota walk in, a morning with the herders and the Pohlani Mata trek.",
+      "default": false,
+      "days": [
+        {
+          "title": "Walk the Saal to a working water mill",
+          "do": [
+            "Arrive via Chamba town, 9 km away.",
+            "Walk along the Saal and the Hul Nala, which meet below H2O House.",
+            "Grind maize at the gharat that H2O House is built on.",
+            "At dinner, your flour becomes makki ki roti with saag at Meenu Ji's table."
+          ],
+          "meet": ["The miller at H2O House", "Meenu Ji or Binda Chacha", "A guide from Chaminoo"],
+          "swaps": ["Chaminoo village walk", "Fishing in the Sal"]
+        },
+        {
+          "title": "Farm in the morning, rappel in the afternoon",
+          "do": [
+            "Morning: farm maize and wheat with your homestay family.",
+            "Milk the cows at Rafi's House.",
+            "Afternoon: adventure day at Nomadic Hikes, with rappelling, zip-lining and more (ages 12 and up; March to June, September to November)."
+          ],
+          "meet": ["A newly opened homestay family", "Rafi's family", "Nomadic Hikes instructors"],
+          "swaps": ["Walk to Vishnu Temple (1.5 km)", "Morning yoga by the river"]
+        },
+        {
+          "title": "Learn Chamba's crafts, then walk the old town",
+          "do": [
+            "In Chamba town, sit with the women who stitch the GI-tagged Chamba rumal.",
+            "Meet the makers of the Chamba chappal.",
+            "Walk the old town to the 10th-century Lakshmi Narayan temples."
+          ],
+          "meet": ["The women who embroider the Chamba rumal", "The Chamba chappal makers", "Valley artists", "A Chamba guide"],
+          "swaps": []
+        },
+        {
+          "title": "Walk Dwat Mahadev's paths with the people who live there",
+          "do": [
+            "A longer listening walk on valley paths with residents.",
+            "Ask what they would like guests to see, and what guests should leave alone.",
+            "A session in the valley's own wellness traditions."
+          ],
+          "meet": ["Residents of Dwat Mahadev", "A local wellness guide, still being chosen"],
+          "swaps": []
+        },
+        {
+          "title": "Walk in to Mystic Village and cook on the chullah",
+          "do": [
+            "Walk in from Khajjiar via Rota, about 2.5 km under the deodars.",
+            "Cook Gaddi food on a wood-fire chullah, with vegetables from the family farm.",
+            "Learn to make Chamba Chukh.",
+            "Eat on the kitchen floor: rajma, makki ki roti, saag."
+          ],
+          "meet": ["Shivani, Pooja and Team Udaan, who run the SheKitchen", "Your host family", "The 4x4 driver"],
+          "swaps": ["Sunset from the mountaintop", "Food walk through five homes"]
+        },
+        {
+          "title": "Herd cattle, clear plastic, sleep on the ridge",
+          "do": [
+            "Morning with the herders: take the cattle out to graze and help with milking (April to October).",
+            "Join Team Parivartan's weekly cleanup and fill an eco-brick.",
+            "Evening: stargazing, then a night in a tent at the Dhaulapir campsite."
+          ],
+          "meet": ["Rajat and Team Parivartan", "A villager who keeps cattle", "The Dhaulapir campsite team"],
+          "swaps": []
+        },
+        {
+          "title": "Trek to Pohlani Mata, then swap skills",
+          "do": [
+            "Morning: the ridge trek to Pohlani Mata temple with a local guide, about 4 hours (April to June, September to November).",
+            "Afternoon: swap skills with the women. You teach what they ask for.",
+            "They teach you pine-needle craft, weaving or crochet."
+          ],
+          "meet": ["The women of Mystic Village", "A local trek guide", "Your second host family"],
+          "swaps": ["Visit the village school", "Sunrise over Kalatop"]
+        },
+        {
+          "title": "Hear the old stories, then walk out to Khajjiar",
+          "do": [
+            "Listen to folk tales and songs, in Gaddi clothes if you like.",
+            "Buy what you learned to make at Gaon ki Hatti.",
+            "Paint your slate for the Feedback Tree and receive your Map of Marks.",
+            "Walk out to Khajjiar meadow and lake."
+          ],
+          "meet": ["Shibo Devi or Brahmi Devi", "The makers of Gaon ki Hatti", "A guide to Khajjiar"],
+          "swaps": []
+        }
+      ]
+    },
+    {
+      "id": "slow-down",
+      "label": "Slow-down seeker",
+      "suits": "Anyone who needs rest: solo travellers, couples, small retreat groups.",
+      "changes": "Yoga by the river, herbal healing, Dwat Mahadev's wellness traditions, birdwatching and a day off the grid.",
+      "default": false,
+      "days": [
+        {
+          "title": "Start slow by the river and the water mill",
+          "do": [
+            "Arrive via Chamba town, 9 km away.",
+            "Yoga and quiet time by the river, where the Saal and the Hul Nala meet below H2O House.",
+            "Watch the gharat's wooden wheel grind maize into flour.",
+            "Dinner: your flour as makki ki roti with saag at Meenu Ji's table."
+          ],
+          "meet": ["The miller at H2O House", "Meenu Ji or Binda Chacha", "A guide from Chaminoo"],
+          "swaps": []
+        },
+        {
+          "title": "Learn the valley's healing plants",
+          "do": [
+            "A herbal healing session: the hill plants of the valley and how they are used.",
+            "A slow morning on the farm with your homestay family.",
+            "Afternoon: rest, or join the Chalo Khelo games with the village children."
+          ],
+          "meet": ["A local healer", "A newly opened homestay family", "Rafi's family"],
+          "swaps": ["Gurukul visit", "Walk to Vishnu Temple (1.5 km)"]
+        },
+        {
+          "title": "Paint in the open-air studio, then meet the rumal makers",
+          "do": [
+            "Paint and carve with valley artists in H2O House's open-air studio.",
+            "In Chamba town, sit with the women who stitch the GI-tagged Chamba rumal.",
+            "Meet the makers of the Chamba chappal.",
+            "Dusk on the Chaugan."
+          ],
+          "meet": ["The women who embroider the Chamba rumal", "The Chamba chappal makers", "Valley artists", "A Chamba guide"],
+          "swaps": ["Lakshmi Narayan temples", "Bhuri Singh Museum"]
+        },
+        {
+          "title": "Learn Dwat Mahadev's own wellness traditions",
+          "do": [
+            "A session in the valley's wellness traditions, including the Yogini traditions now being shaped into experiences.",
+            "A slow listening walk with residents.",
+            "Ask what they would like guests to see, and what guests should leave alone."
+          ],
+          "meet": ["Residents of Dwat Mahadev", "A local wellness guide, still being chosen"],
+          "swaps": []
+        },
+        {
+          "title": "Walk in under the deodars to a women-run kitchen",
+          "do": [
+            "Walk in from Khajjiar via Pukhri, about 1.5 km under the deodars.",
+            "Cook Gaddi food on a wood-fire chullah, with clay pots and vegetables from the family farm.",
+            "Eat on the kitchen floor: rajma, makki ki roti, saag.",
+            "Sunset from the mountaintop, with Chamba and Dalhousie to the west."
+          ],
+          "meet": ["Shivani, Pooja and Team Udaan, who run the SheKitchen", "Your host family", "The 4x4 driver"],
+          "swaps": ["Siddu at Kaku di Rasoi", "Pickle-making"]
+        },
+        {
+          "title": "Watch birds on the ridge and make an eco-brick",
+          "do": [
+            "Morning: birdwatching on the ridge with a guide from Mystic Village.",
+            "Join Team Parivartan's weekly cleanup and fill an eco-brick.",
+            "Learn plastic upcycling with Neelam Sharma.",
+            "Evening: stargazing, then a night in a tent at the Dhaulapir campsite."
+          ],
+          "meet": ["Rajat and Team Parivartan", "Neelam Sharma", "The Dhaulapir campsite team"],
+          "swaps": ["Biodiversity trail", "A morning on the farm"]
+        },
+        {
+          "title": "Take a day off the grid, then swap skills",
+          "do": [
+            "Sunrise at about 6 am over Kalatop Wildlife Sanctuary.",
+            "A day off the grid: almost no phone signal, and time in the meadow.",
+            "Afternoon: swap skills with the women. They teach you pine-needle craft, weaving or crochet."
+          ],
+          "meet": ["The women of Mystic Village", "The village school's teachers", "Your second host family"],
+          "swaps": ["Visit the village school", "Orchard walk with Amarchand"]
+        },
+        {
+          "title": "Hear Gaddi folk tales and buy from local makers",
+          "do": [
+            "Dress in Gaddi clothes (Luanchadi or Chola-Dora).",
+            "Listen to folk tales and songs.",
+            "Buy what you learned to make.",
+            "Paint your slate for the Feedback Tree, then receive your Map of Marks."
+          ],
+          "meet": ["Shibo Devi or Brahmi Devi", "The makers of Gaon ki Hatti", "A guide to Khajjiar"],
+          "swaps": []
+        }
+      ]
+    },
+    {
+      "id": "learning",
+      "label": "Learning group",
+      "suits": "Schools and colleges. Groups are split across host homes, so ask us first.",
+      "changes": "Rural life, crafts, history and ecology: the water mill, a waste count, and a lesson exchange at the village school.",
+      "default": false,
+      "days": [
+        {
+          "title": "Learn how a water mill grinds grain",
+          "do": [
+            "Arrive via Chamba town, 9 km away.",
+            "Gharat tour: how a water-driven stone mill turns grain into village flour.",
+            "A village walk through Chaminoo's fields, past Kathkuni and mud homes.",
+            "Dinner in small groups with host families."
+          ],
+          "meet": ["The miller at H2O House", "Meenu Ji or Binda Chacha", "A guide from Chaminoo"],
+          "swaps": ["Rural photo walk", "Fishing in the Sal", "River walk along the Saal"]
+        },
+        {
+          "title": "Learn farm work and play with village children",
+          "do": [
+            "Learn the basics of farming maize and wheat.",
+            "Harvest vegetables, and milk the cows at Rafi's House.",
+            "Afternoon: Chalo Khelo, traditional games with the village children.",
+            "A Gurukul visit: Vedas, rituals and customs (ages 8 and up)."
+          ],
+          "meet": ["A newly opened homestay family", "Rafi's family", "The village children", "The gurukul teachers"],
+          "swaps": ["Herbal healing session", "Walk to Vishnu Temple (1.5 km)"]
+        },
+        {
+          "title": "Study Chamba's crafts and history",
+          "do": [
+            "Sit with the women who stitch the GI-tagged Chamba rumal.",
+            "Meet the makers of the Chamba chappal.",
+            "Visit the Bhuri Singh Museum.",
+            "Walk to the 10th-century Lakshmi Narayan temples."
+          ],
+          "meet": ["The women who embroider the Chamba rumal", "The Chamba chappal makers", "Valley artists", "A Chamba guide"],
+          "swaps": []
+        },
+        {
+          "title": "Listen to a valley before it opens to guests",
+          "do": [
+            "A listening walk with residents, planned with NotOnMap's team.",
+            "Ask what they would like guests to see, and what guests should leave alone."
+          ],
+          "meet": ["Residents of Dwat Mahadev", "A local wellness guide, still being chosen"],
+          "swaps": []
+        },
+        {
+          "title": "Cook in Gaddi kitchens in small groups",
+          "do": [
+            "Walk in from Khajjiar via Pukhri, about 1.5 km under the deodars.",
+            "Split into small groups across host kitchens.",
+            "Cook Gaddi food on wood-fire chullahs (ages 8 and up).",
+            "Eat on the kitchen floor: rajma, makki ki roti, saag."
+          ],
+          "meet": ["Shivani, Pooja and Team Udaan, who run the SheKitchen", "Your host family", "The 4x4 driver"],
+          "swaps": ["Food walk through five homes", "Siddu at Kaku di Rasoi", "Pickle-making"]
+        },
+        {
+          "title": "Count the waste and build with eco-bricks",
+          "do": [
+            "Join Team Parivartan's weekly cleanup, and count what you collect.",
+            "Fill eco-bricks for a village bench, wall or garden.",
+            "Learn plastic upcycling with Neelam Sharma.",
+            "Afternoon: the biodiversity trail."
+          ],
+          "meet": ["Rajat and Team Parivartan", "Neelam Sharma", "The Dhaulapir campsite team"],
+          "swaps": ["Biodiversity trail", "Birdwatching on the ridge", "Pohlani Mata trek"]
+        },
+        {
+          "title": "Exchange lessons with the village school",
+          "do": [
+            "Morning: visit the area's only school and exchange lessons with its students (with the school's consent).",
+            "Afternoon: teachers and students aged 16 and up swap skills with the women.",
+            "Learn pine-needle craft, weaving or crochet."
+          ],
+          "meet": ["The women of Mystic Village", "The village school's teachers", "Your second host family"],
+          "swaps": ["Gaddi life walk with a villager", "Birdwatching on the ridge"]
+        },
+        {
+          "title": "Hear Gaddi folk tales and buy from local makers",
+          "do": [
+            "Listen to folk tales and songs.",
+            "Buy what you learned to make at Gaon ki Hatti.",
+            "Paint one slate per group for the Feedback Tree.",
+            "Receive your group's Map of Marks."
+          ],
+          "meet": ["Shibo Devi or Brahmi Devi", "The makers of Gaon ki Hatti", "A guide to Khajjiar"],
+          "swaps": []
+        }
+      ]
+    }
+  ],
+
+  "mapOfMarks": {
+    "title": "Your Map of Marks",
+    "hindi": "उनके नक्शे पर आपका नाम",
+    "after": "About 90 days later, a note from the village tells you what your Mark became.",
+    "counts": [
+      { "value": "26", "label": "people impacted" },
+      { "value": "4", "label": "family homes" },
+      { "value": "6", "label": "causes funded" },
+      { "value": "1", "label": "eco-brick" },
+      { "value": "1", "label": "slate on the tree" }
+    ],
+    "note": "Your figures are counted from your own booking."
+  },
+
+  "trust": {
+    "line": "NotOnMap has reached 800+ people. Its Impact Assessment for Mystic Village (April to December 2025) found 87% of visitors satisfied and 3x repeat visits. NotOnMap holds an IRTA Silver award.",
+    "source": "NotOnMap Impact Assessment, Mystic Village, April to December 2025"
+  },
+
+  "contact": {
+    "web": "www.notonmap.com",
+    "email": "info@notonmap.com",
+    "whatsapp": "+91 95990 66404"
+  },
+
+  "consent": "People are named only with their consent. Figures come from NotOnMap's reports for 2025-26. The share of your trip that goes to each cause will be fixed before you book."
+}

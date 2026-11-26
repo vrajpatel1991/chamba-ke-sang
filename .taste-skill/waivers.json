@@ -1,7 +1,12 @@
 [
   {
-    "check": "scroll-reveal",
-    "target": "div.closing__cta.close--type > a.btn.btn--primary",
-    "reason": "Nothing on this page fades, rises or unmasks on scroll. The close repeats the main action word for word, which makes it a twin of the phone action bar, and system.js watches every twin with an IntersectionObserver so one screen never shows the action twice. The transition the check sees is the kit's own bar hiding itself; the button is still from the first paint and never moves."
+    "check": "screen-height",
+    "target": "#itinerary",
+    "reason": "This section is the itinerary: eight days, each with its Mark, its impact, what you do, who you meet and where you sleep. An eight-day itinerary is eight days long, and it grows again when a visitor picks the trekker or the learning-group version. It has a page of its own for that reason, and it keeps one screen as its floor and grows with its content, so it never lies on the section below."
+  },
+  {
+    "check": "phone-number",
+    "target": "ul.footer__nav > li:nth-of-type(3)",
+    "reason": "The brief gives this number. It is NotOnMap's own published WhatsApp Business line, printed on the back of the brochure this site is built from, and the rule in copy.md is phone numbers only where the brief gives one. It is a link to wa.me rather than a dialable tel:, and no digits are printed on the page."
   }
 ]
